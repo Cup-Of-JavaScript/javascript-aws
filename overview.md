@@ -35,6 +35,7 @@
   - AWS Shield
     - Standard
     - Advanced
+  - Pricing: Pay as you/pay for what you use
 
 # All Services
 - [AWS Cloud](https://docs.aws.amazon.com/cli/latest/reference/)
