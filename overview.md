@@ -3,6 +3,11 @@
 - AWS responsibility “Security of the Cloud”
 - Customer responsibility “Security in the Cloud”
 
+- [Global](https://aws.amazon.com/about-aws/global-infrastructure/?p=ngi&loc=1)
+- [Regions & AZs](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
+- 84 Azs
+- 300 Edge locations
+
 # Videos
 - [AWS Foundations: Getting Started with the AWS Cloud Essentials 66min](https://app.pluralsight.com/course-player?clipId=d9197e74-8d70-45c2-a951-0ad7845e3daa)
   - Deployments
@@ -36,6 +41,14 @@
     - Standard
     - Advanced
   - Pricing: Pay as you/pay for what you use
+
+- [Fundamental Cloud Concepts for AWS 1h 24m] (https://app.pluralsight.com/library/courses/fundamental-cloud-concepts-aws/table-of-contents)
+- Budget Alerts
+- Edge Locations
+  - CloudFront/Lambda
+  - R53
+- AWS TCO Calculator/Monthly Calculator
+- Resource tags
 
 # All Services
 - [AWS Cloud](https://docs.aws.amazon.com/cli/latest/reference/)
