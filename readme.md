@@ -5,17 +5,12 @@
 - Install dependencies
 
 # Contents
-- Cloud Overview
-- CLI
-- IAM Security
-- RDS
-- DynamoDB
-- API GW
-- S3
+- [Overview](overview.md)
+- [CLI](cli.md)
+- [IAM Security](iam.md)
+- [S3](s3.md)
+- [Lambda](lambda.md)
+- [API GW](api-gw.md)
+- [RDS](rds.md)
+- [DynamoDB](dynamodb.md)
 
-# Videos
-- [AWS Foundations: Getting Started with the AWS Cloud Essentials 66min](https://app.pluralsight.com/course-player?clipId=d9197e74-8d70-45c2-a951-0ad7845e3daa)
-  - Deployments
-     - Full Cloud
-     - Hybrid
-     - Private Cloud
