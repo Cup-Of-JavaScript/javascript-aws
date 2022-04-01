@@ -32,6 +32,9 @@
   - Direct Connect
   - VPC 
   - IAM     
+  - AWS Shield
+    - Standard
+    - Advanced
 
 # All Services
 - [AWS Cloud](https://docs.aws.amazon.com/cli/latest/reference/)
