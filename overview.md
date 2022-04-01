@@ -49,6 +49,8 @@
   - R53
 - AWS TCO Calculator/Monthly Calculator
 - Resource tags
+- Support tiers
+
 
 # All Services
 - [AWS Cloud](https://docs.aws.amazon.com/cli/latest/reference/)
