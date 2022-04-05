@@ -7,3 +7,4 @@ Use CLI to upload a file to S3
 Use aws-sdk to upload a file to S3
 
 # Ex. 3 API GW
+Add a managed policy to the 
