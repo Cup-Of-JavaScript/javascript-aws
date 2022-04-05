@@ -1,7 +1,7 @@
 # IAM
-[AWS re:Invent 2018](https://youtu.be/YQsK4MtsELU)
+[AWS re:Invent 2018 1hr](https://youtu.be/YQsK4MtsELU)
 
-### PARC Model
+## PARC Model
 ```
 {
   "Statement" :[{
@@ -18,7 +18,7 @@
 }
 ```
 
-#### Principal
+### Principal
 The entity that is allowed or denied access. 
 
 - You may not see the principal often, because we attach policies to principals (IAM User or Role) most of the time.
@@ -57,12 +57,25 @@ Common types of principals:
 }
 ```
 
+### Action
+Type of action that is allowed or denied access (over 4K in AWS).
 
+```
+"Action":"s3:GetObject"
+```
 
+### Resource
+The Amazon resource(s) the action will act on. ARN = Amazon Resource Number
 
+```
+"Resource" : "arn:aws:aws:sqs:us-west-2:123456789012:queue1"
+```
 
-
-
+### Condition
+The conditions under the access defined is valid.
+```
+"StringEqualsIfExists":{"aws:RequestTag/project":["dev-env"]}
+```
 
 
 # Videos
