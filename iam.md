@@ -87,13 +87,12 @@ Access to a particular resource is the intersetion between these items:
   - Permission Boundries
 
 ### IAM Policy Evalutation
-
-![](./docs/iam-policy-enforcement.png)
-
-- Most common problem... what is not matching?
+Most common problem... what is not matching?
   - Is the resource not matching?
   - Is the action not matching?
   - Is the condition not matching?
+
+![](./docs/iam-policy-enforcement.png)
 
 ### Service Control Policies (SCP)
 - Guardrails at the account level
@@ -102,7 +101,6 @@ Access to a particular resource is the intersetion between these items:
 
 ### Permission Boundries
 - Controls the maxium permissions employees can grant
-
 
 # Videos
 [Identity and Access Management on AWS: Policies and Permissions](
