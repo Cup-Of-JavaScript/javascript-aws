@@ -120,5 +120,7 @@ Access to a particular resource is the intersetion between these items:
 ### Permission Boundries
 - Controls the maxium permissions employees can grant
 
-# Tools
-[Policy Simulator](https://policysim.aws.amazon.com/home/index.jsp?#roles)
+# Tools & Tips
+- [Policy Simulator](https://policysim.aws.amazon.com/home/index.jsp?#roles)
+- When initially creating a policy, start wide open, then narrow it down to least privilege
+- Sometimes new/updating policies can take a few minutes to propagate
