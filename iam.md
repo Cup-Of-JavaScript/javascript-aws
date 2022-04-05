@@ -83,11 +83,11 @@ EXTREMELY powerful.
 
 # AWS Access
 Access to a particular resource is the intersetion between these items:
-  - IAM Policy Evalutation
+  - IAM Policy Evaluation
   - Service Control Policies (SCP)
   - Permission Boundries
 
-### IAM Policy Evalutation
+### IAM Policy Evaluation
 Most common problem... what is not matching?
   - Is the resource not matching?
   - Is the action not matching?
