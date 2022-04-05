@@ -95,8 +95,8 @@ Most common problem... what is not matching?
   - Is the action not matching?
   - Is the condition not matching?
 
-- Implicit deny on everything
-- Allways need to be given permission to do things
+- AWS: Implicit deny on everything
+- Always need to be given permission to do things
 
 ![](./docs/iam-policy-enforcement.png)
 
