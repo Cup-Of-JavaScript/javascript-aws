@@ -16,9 +16,9 @@ A policy is a JSON document.
 {
   "Statement" :[{
       "Effect": "effect",  (Allow/Deny)
-      "Principal":"principal", (the who)
+      "Principal":"principal", (the who or what)
       "Action":"action", 
-      "Resource":"arn", (the what)
+      "Resource":"arn", (the thing)
       "Condition": {
           "condition": {
               "key": "value"
@@ -29,7 +29,7 @@ A policy is a JSON document.
 ```
 
 # Principal
-The entity that is allowed or denied access (AKA "the who") 
+The entity that is allowed or denied access (AKA "the who or what") 
 
 - You may not see the principal often, because we attach policies to existing principals (IAM User or Role) most of the time.
 - When attaching a policy to a bucket we will need to specify the principle (the who)
@@ -77,7 +77,7 @@ Type of action that is allowed or denied access (over 4K actions in AWS).
 ```
 
 # Resource
-The Amazon resource(s) the action will act on (AKA "the what"). ARN = Amazon Resource Number
+The Amazon resource(s) the action will act on (AKA "the thing"). ARN = Amazon Resource Number
 
 ```
 "Resource" : "arn:aws:aws:sqs:us-west-2:123456789012:queue1"
