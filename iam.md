@@ -21,7 +21,7 @@
 ### Principal
 The entity that is allowed or denied access. 
 
-- You may not see the principal often, because we attach policies to principals (IAM User or Role) most of the time.
+- You may not see the principal often, because we attach policies to existing principals (IAM User or Role) most of the time.
 - When attaching a policy to a bucket we will need to specify the principle (the who)
 
 [All Types of Principals](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html)
