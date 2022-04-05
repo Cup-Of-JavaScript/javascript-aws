@@ -3,7 +3,7 @@ const AWS = require('aws-sdk')
 const S3 = new AWS.S3({region: 'us-east-1'})
 
 const upload = async () => {
-    let b = { firstName: "Joe", lastName: "Smith" };
+    const b = { firstName: "Joe", lastName: "Smith" };
     const buffer = Buffer.from(JSON.stringify(b), "utf-8");
     await S3.upload({ Bucket: 'sia-test-2', Key: 'joe.txt', Body: buffer }).promise()
 }
