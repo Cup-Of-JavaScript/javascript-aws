@@ -1,5 +1,5 @@
 # IAM
-[AWS IAM Core Concepts You NEED to Know 20min](https://youtu.be/_ZCTvmaPgao)
+[AWS IAM Core Concepts You NEED to Know 20m](https://youtu.be/_ZCTvmaPgao)
 [AWS re:Invent 2018 1hr](https://youtu.be/YQsK4MtsELU)
 
 ## PARC Model
