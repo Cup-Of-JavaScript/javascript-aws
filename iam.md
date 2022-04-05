@@ -12,7 +12,7 @@ https://app.pluralsight.com/library/courses/identity-access-management-aws-polic
 - Inline 
 
 # Authorization vs Authenication
-Authenication is proving who you say you are, authorization is what you are allowed access to after you have successfully authenticated.  IAM policies focus on authorization.
+Authenication is proving who you say you are, authorization is what you are allowed to access after you have successfully authenticated.  IAM policies focus on authorization.
 
 ## PARC Model
 A policy is a JSON document.
