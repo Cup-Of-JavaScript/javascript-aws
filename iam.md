@@ -18,7 +18,7 @@
 }
 ```
 
-### Principal
+# Principal
 The entity that is allowed or denied access (AKA "the who") 
 
 - You may not see the principal often, because we attach policies to existing principals (IAM User or Role) most of the time.
@@ -59,26 +59,30 @@ Click [here](service-principals.md) for a list of AWS services.
 }
 ```
 
-### Action
+# Action
 Type of action that is allowed or denied access (over 4K in AWS).
 
 ```
 "Action":"s3:GetObject"
 ```
 
-### Resource
+# Resource
 The Amazon resource(s) the action will act on (AKA "the what"). ARN = Amazon Resource Number
 
 ```
 "Resource" : "arn:aws:aws:sqs:us-west-2:123456789012:queue1"
 ```
 
-### Condition
+# Condition
 The conditions under the access defined is valid.  Conditions are 
 EXTREMELY powerful.
 ```
 "StringEqualsIfExists":{"aws:RequestTag/project":["dev-env"]}
 ```
+
+# Policy Enforcement Process
+
+![](./docs/iam-policy-enforcement.png)
 
 
 # Videos
