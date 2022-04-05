@@ -80,7 +80,7 @@ EXTREMELY powerful.
 "StringEqualsIfExists":{"aws:RequestTag/project":["dev-env"]}
 ```
 
-# Policy Enforcement Process
+# IAM Policy Evalutation
 
 ![](./docs/iam-policy-enforcement.png)
 
