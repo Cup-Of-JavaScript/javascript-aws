@@ -123,5 +123,5 @@ Access to a particular resource is the intersetion between these items:
 # Tools & Tips
 - [Policy Generator](https://awspolicygen.s3.amazonaws.com/policygen.html)
 - [Policy Simulator](https://policysim.aws.amazon.com/home/index.jsp?#roles)
-- When initially creating a policy, start wide open, then narrow it down to least privilege
-- Sometimes new/updating policies can take a few minutes to propagate
+- When initially creating a policy, start wide open then narrow it down to least privileges
+- Sometimes new/updating policies can take a few minutes to propagate!
