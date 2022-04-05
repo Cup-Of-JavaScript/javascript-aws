@@ -72,7 +72,8 @@ The Amazon resource(s) the action will act on. ARN = Amazon Resource Number
 ```
 
 ### Condition
-The conditions under the access defined is valid.
+The conditions under the access defined is valid.  Conditions are 
+EXTREMELY powerful.
 ```
 "StringEqualsIfExists":{"aws:RequestTag/project":["dev-env"]}
 ```
