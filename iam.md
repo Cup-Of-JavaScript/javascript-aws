@@ -81,7 +81,7 @@ EXTREMELY powerful.
 ```
 
 # AWS Access
-Access to a particular resource is the intersetion between the following:
+Access to a particular resource is the intersetion between these items:
   - IAM Policy Evalutation
   - Service Control Policies (SCP)
   - Permission Boundries
