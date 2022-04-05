@@ -28,6 +28,11 @@ The entity that is allowed or denied access (AKA "the who")
 
 Common types of principals:
 
+### Any Principal
+```
+"Principal" : { "AWS" : "*" }
+```
+
 ### Service Principal [List](service-principals.md)
 ```
 "Principal": {
@@ -38,16 +43,11 @@ Common types of principals:
 }
 ```
 
-### ARN Principal
+### IAM User Principal
 ```
 "Principal":{
     "AWS":"arn:aws:iam::account-number-without-hyphens:user/username"
 }
-```
-
-### Any Principal
-```
-"Principal" : { "AWS" : "*" }
 ```
 
 ### IAM Role Principals
