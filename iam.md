@@ -1,4 +1,5 @@
 # IAM
+[AWS re:Invent 2018](https://youtu.be/YQsK4MtsELU)
 
 ### PARC Model
 ```
@@ -22,6 +23,8 @@ The entity that is allowed or denied access.
 
 - You may not see the principal often, because we attach policies to principals (IAM User or Role) most of the time.
 - When attaching a policy to a bucket we will need to specify the principle (the who)
+
+[All Types of Principals](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html)
 
 Common types of principals:
 
@@ -54,7 +57,7 @@ Common types of principals:
 }
 ```
 
-[All Types](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html)
+
 
 
 
@@ -66,4 +69,4 @@ Common types of principals:
 [Identity and Access Management on AWS: Policies and Permissions](
 https://app.pluralsight.com/library/courses/identity-access-management-aws-policies-permissions/table-of-contents)
 
-[AWS re:Invent 2018](https://youtu.be/YQsK4MtsELU)
+
