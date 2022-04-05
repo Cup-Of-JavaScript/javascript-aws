@@ -32,8 +32,8 @@ Common types of principals:
 ```
 "Principal": {
     "Service": [
-        "ecs.amazonaws.com",
-        "elasticloadbalancing.amazonaws.com"
+        "ec2.amazonaws.com",
+        "lambda.amazonaws.com"
    ]
 }
 ```
