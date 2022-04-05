@@ -23,5 +23,7 @@ exports.handler = async (event) => {
 
 ```
 
+Name your function using the following schema: sia-{your initials}-upload-s3
+
 Modify the execution role for this lambda function to enable this function to upload a file to
 the S3 bucket: `sia-test-2`
