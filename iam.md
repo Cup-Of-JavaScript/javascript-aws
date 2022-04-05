@@ -25,7 +25,7 @@ The entity that is allowed or denied access.
 
 Common types of principals:
 
-Service Principal [List](service-principals.md)
+### Service Principal [List](service-principals.md)
 ```
 "Principal": {
     "Service": [
@@ -33,28 +33,21 @@ Service Principal [List](service-principals.md)
         "elasticloadbalancing.amazonaws.com"
    ]
 }
+```
 
-ARN Principal
+### ARN Principal
 ```
 "Principal":{
     "AWS":"arn:aws:iam::account-number-without-hyphens:user/username"
 }
 ```
 
-Any Principal
+### Any Principal
 ```
 "Principal" : { "AWS" : "*" }
 ```
 
-SAML session principals
-```
-"Principal": { 
-    "Federated": "arn:aws:iam::AWS-account-ID:saml-provider/provider-name" 
-}
-
-```
-
-IAM Role Principals
+### IAM Role Principals
 ```
 "Principal": { 
     "AWS": "arn:aws:iam::AWS-account-ID:role/role-name" 
