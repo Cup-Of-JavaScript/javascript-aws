@@ -80,7 +80,13 @@ EXTREMELY powerful.
 "StringEqualsIfExists":{"aws:RequestTag/project":["dev-env"]}
 ```
 
-# IAM Policy Evalutation
+# AWS Access
+Access to a particular resource is the intersetion between the following:
+  - IAM Policy Evalutation
+  - Service Control Policies (SCP)
+  - Permission Boundries
+
+### IAM Policy Evalutation
 
 ![](./docs/iam-policy-enforcement.png)
 
@@ -89,12 +95,12 @@ EXTREMELY powerful.
   - Is the action not matching?
   - Is the condition not matching?
 
-# Service Control Policies (SCP)
+### Service Control Policies (SCP)
 - Guardrails at the account level
 - By default, SCP is Allow *.*
 - SCPs do not grant, they block
 
-# Permission Boundries
+### Permission Boundries
 - Controls the maxium permissions employees can grant
 
 
