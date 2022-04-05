@@ -1,7 +1,7 @@
 # IAM
 - [AWS IAM Core Concepts You NEED to Know 20m](https://youtu.be/_ZCTvmaPgao)
 - [AWS re:Invent 2018 1hr](https://youtu.be/YQsK4MtsELU)
-- [Identity and Access Management on AWS: Policies and Permissions](
+- [Identity and Access Management on AWS: Policies and Permissions 2h 21m](
 https://app.pluralsight.com/library/courses/identity-access-management-aws-policies-permissions/table-of-contents)
 - [AWS IAM Tutorial - How to Create a User and Policy 5m](https://youtu.be/dMPDZHVIZBs)
 - [AWS IAM Overview in 7 minutes | Beginner Overview 7m](https://youtu.be/y8cbKJAo3B4)
