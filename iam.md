@@ -63,7 +63,7 @@ Click [here](service-principals.md) for a list of AWS services.
 ```
 
 # Action
-Type of action that is allowed or denied access (over 4K in AWS).
+Type of action that is allowed or denied access (over 4K actions in AWS).
 
 ```
 "Action":"s3:GetObject"
@@ -107,3 +107,6 @@ Access to a particular resource is the intersetion between these items:
 
 ### Permission Boundries
 - Controls the maxium permissions employees can grant
+
+# Tools
+[Policy Simulator](https://policysim.aws.amazon.com/home/index.jsp?#roles)
