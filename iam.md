@@ -84,6 +84,19 @@ EXTREMELY powerful.
 
 ![](./docs/iam-policy-enforcement.png)
 
+- Most common problem... what is not matching?
+  - Is the resource not matching?
+  - Is the action not matching?
+  - Is the condition not matching?
+
+# Service Control Policies (SCP)
+- Guardrails at the account level
+- By default, SCP is Allow *.*
+- SCPs do not grant, they block
+
+# Permission Boundries
+- Controls the maxium permissions employees can grant
+
 
 # Videos
 [Identity and Access Management on AWS: Policies and Permissions](
