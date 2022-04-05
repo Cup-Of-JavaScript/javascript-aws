@@ -33,7 +33,9 @@ Common types of principals:
 "Principal" : { "AWS" : "*" }
 ```
 
-### Service Principal [List](service-principals.md)
+### Service Principal 
+Click [here](service-principals.md) for a list of AWS services.
+
 ```
 "Principal": {
     "Service": [
