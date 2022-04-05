@@ -7,7 +7,7 @@ https://app.pluralsight.com/library/courses/identity-access-management-aws-polic
 - [AWS IAM Overview in 7 minutes | Beginner Overview 7m](https://youtu.be/y8cbKJAo3B4)
 
 # Authorization vs Authenication
-Authenication is proving who you say you are, authorization is what you are allowed access to after you have successfully authenticated.  IAM policies focus on Authorization.
+Authenication is proving who you say you are, authorization is what you are allowed access to after you have successfully authenticated.  IAM policies focus on authorization.
 
 ## PARC Model
 ```
