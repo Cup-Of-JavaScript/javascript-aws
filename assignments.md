@@ -1,10 +1,10 @@
 # JavaScript AWS Assignments
 
 # Ex. 1 CLI S3
-Use CLI to upload a file to S3
+Use the CLI to upload a file to the following S3 bucket: `sia-test-2`.
 
 # Ex. 2 AWS-SDK S3 
-Use aws-sdk to upload a file to S3
+Use aws-sdk to upload a file to the following S3 bucket: `sia-test-2`.
 
 # Ex. 3 API GW
 Create a lambda function that contains the following code:
