@@ -96,7 +96,7 @@ Most common problem... what is not matching?
 
 ### Service Control Policies (SCP)
 - Guardrails at the account level
-- By default, SCP is Allow *.*
+- By default, SCP is Allow \*.\*
 - SCPs do not grant, they block
 
 ### Permission Boundries
