@@ -36,3 +36,4 @@ Create a bucket policy that only allows you to upload a file from your home comp
 # Ex. 6 API GW
 Create a POST route with the following schema: `/{STUDENT_ID}/upload`.  Create a Lambda integration that calls a Lambda file to upload a file to S3.  Attach the Lambda integration to this Route, deploy the API, and call this route using Postman.
 
+# Ex. 7 DynamoDB

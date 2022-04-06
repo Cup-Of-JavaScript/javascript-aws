@@ -1,5 +1,5 @@
 # Overview
-[Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
+- [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
 - AWS responsibility “Security of the Cloud”
 - Customer responsibility “Security in the Cloud”
 
