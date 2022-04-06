@@ -326,7 +326,7 @@ service-quotas
 servicecatalog
 servicecatalog-appregistry
 servicediscovery
-ses
+ses***
 sesv2
 shield
 signer
