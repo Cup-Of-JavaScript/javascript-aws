@@ -47,7 +47,7 @@
     - Advanced
   - Pricing: Pay as you/pay for what you use
 
-[Fundamental Cloud Concepts for AWS 1h 24m] (https://app.pluralsight.com/library/courses/fundamental-cloud-concepts-aws/table-of-contents)
+[Fundamental Cloud Concepts for AWS 1h 24m](https://app.pluralsight.com/library/courses/fundamental-cloud-concepts-aws/table-of-contents)
 - Budget Alerts
 - Edge Locations
   - CloudFront/Lambda
