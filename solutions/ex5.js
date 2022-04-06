@@ -3,7 +3,7 @@ AWS.config.update({region: 'us-east-1'});
 
 const ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
-const params = {
+const uploadParams = {
   TableName: 'CUSTOMER_LIST',
   Item: {
     'CUSTOMER_ID' : {N: '001'},
@@ -11,9 +11,18 @@ const params = {
   }
 };
 
+const queryParams = {
+    TableName: 'CUSTOMER_LIST',
+    Key: {
+      'CUSTOMER_ID': {N: '001'}
+    },
+    ProjectionExpression: 'CUSTOMER_NAME'
+};
+
+
 const upload = async () => {
     try {
-        await ddb.putItem(params).promise();
+        await ddb.putItem(uploadParams).promise();
         console.log("ok")
     }
     catch(err) {
@@ -21,6 +30,12 @@ const upload = async () => {
     }
 }
 
-upload();
+const query = async () => {
+    const r = await ddb.getItem(queryParams).promise();
+    console.log(r);
+}
+
+//upload();
+query();
 
 
