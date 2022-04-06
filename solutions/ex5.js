@@ -6,8 +6,8 @@ const ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 const uploadParams = {
   TableName: 'CUSTOMER_LIST',
   Item: {
-    'CUSTOMER_ID' : {N: '001'},
-    'CUSTOMER_NAME' : {S: 'Richard Doe'}
+    'CUSTOMER_ID' : {N: '002'},
+    'CUSTOMER_NAME' : {S: 'Marty Burolla'}
   }
 };
 
@@ -35,5 +35,5 @@ const getItem = async () => {
     console.log(r);
 }
 
-//insert();
-getItem();
+insert();
+//getItem();
