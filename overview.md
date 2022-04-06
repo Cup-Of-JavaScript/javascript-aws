@@ -63,7 +63,7 @@
 ```
 accessanalyzer
 account
-acm
+acm***
 acm-pca
 alexaforbusiness
 amp
@@ -109,7 +109,7 @@ cloudhsmv2
 cloudsearch
 cloudsearchdomain
 cloudtrail
-cloudwatch
+cloudwatch***
 codeartifact
 codebuild
 codecommit
@@ -148,10 +148,10 @@ dms
 docdb
 drs
 ds
-dynamodb
+dynamodb***
 dynamodbstreams
 ebs
-ec2
+ec2***
 ec2-instance-connect
 ecr
 ecr-public
@@ -182,7 +182,7 @@ gamelift
 gamesparks
 glacier
 globalaccelerator
-glue
+glue***
 grafana
 greengrass
 greengrassv2
@@ -192,13 +192,13 @@ health
 healthlake
 history
 honeycode
-iam
+iam***
 identitystore
 imagebuilder
 importexport
 inspector
 inspector2
-iot
+iot***
 iot-data
 iot-jobs-data
 iot1click-devices
@@ -225,9 +225,9 @@ kinesis-video-signaling
 kinesisanalytics
 kinesisanalyticsv2
 kinesisvideo
-kms
+kms***
 lakeformation
-lambda
+lambda***
 lex-models
 lex-runtime
 lexv2-models
@@ -291,7 +291,7 @@ qldb-session
 quicksight
 ram
 rbin
-rds
+rds***
 rds-data
 redshift
 redshift-data
@@ -300,14 +300,14 @@ resiliencehub
 resource-groups
 resourcegroupstaggingapi
 robomaker
-route53
+route53***
 route53-recovery-cluster
 route53-recovery-control-config
 route53-recovery-readiness
 route53domains
 route53resolver
 rum
-s3
+s3***
 s3api
 s3control
 s3outposts
@@ -333,8 +333,8 @@ signer
 sms
 snow-device-management
 snowball
-sns
-sqs
+sns***
+sqs***
 ssm
 ssm-contacts
 ssm-incidents
@@ -354,7 +354,7 @@ transcribe
 transfer
 translate
 voice-id
-waf
+waf***
 waf-regional
 wafv2
 wellarchitected
@@ -367,3 +367,5 @@ workspaces
 workspaces-web
 xray
 ```
+
+*** My experience.
