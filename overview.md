@@ -343,7 +343,7 @@ sso-admin
 sso-oidc
 stepfunctions
 storagegateway
-sts
+sts***
 support
 swf
 synthetics
