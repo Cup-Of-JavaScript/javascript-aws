@@ -1,13 +1,16 @@
 # JavaScript AWS Assignments
 
-# Ex. 1 CLI S3
-Use the AWS CLI to upload a file to the following S3 bucket: `sia-test-2`.
+# Ex. 1
+Create an S3 bucket with the following schema: `sia-{YOUR_STUDENT_ID}-bucket`.  This will be your student bucket.
 
-# Ex. 2 AWS-SDK S3 
-Use aws-sdk to upload a file to the following S3 bucket: `sia-test-2`.
+# Ex. 2 CLI S3
+Use the AWS CLI to upload a file to your student bucket.
 
-# Ex. 3 IAM Policy Lambda
-Create a lambda function that contains the following code:
+# Ex. 3 AWS-SDK S3 
+Use aws-sdk to upload a file to your student bucket.
+
+# Ex. 4 IAM Policy Lambda
+Create a Lambda function that contains the following code:
 
 ```
 var AWS = require('aws-sdk');
@@ -25,13 +28,11 @@ exports.handler = async (event) => {
 
 Name your function using the following schema: sia-{your initials}-upload-s3
 
-Create a managed policy and attach it to the execution role for your lambda function.  This new policy provides write access to the S3 bucket: `sia-test-2`.
+Create a managed policy and attach it to the execution role for your lambda function.  This new policy provides write access to your student bucket.
 
-# Ex. 4  IAM Bucket Policy
-Create an S3 bucket with the following naming schema: `sia-{STUDENT_ID}-secure-upload`.
+# Ex. 5  IAM Bucket Policy
+Create a bucket policy that only allows you to upload a file from your home computer and attach it to your student bucket.
 
-Create a bucket policy that only allows you to upload a file from your home computer and attach it to this bucket.
-
-# Ex. 5 API GW
+# Ex. 6 API GW
 Create a POST route with the following schema: `/{STUDENT_ID}/upload`.  Create a Lambda integration that calls a Lambda file to upload a file to S3.  Attach the Lambda integration to this Route, deploy the API, and call this route using Postman.
 
