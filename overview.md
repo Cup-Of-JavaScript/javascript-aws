@@ -10,7 +10,7 @@
 
 - The cloud is spongy!  Some things take awhile to propogate/activate.
 - Avoid using the root account as your "goto" account
-- Create three billing alarms:
+- Create at least three billing alarms:
   - $1.00/day
   - $1.50/day
   - $2.00/day
