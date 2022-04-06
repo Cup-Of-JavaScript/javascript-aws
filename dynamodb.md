@@ -2,11 +2,12 @@
 - [AWS DynamoDB Fundamentals ~2h (Skip 4 & 5)](https://app.pluralsight.com/library/courses/aws-dynamodb-fundamentals/table-of-contents) (UI is old)
 - [Best Practice](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices.html)
 - [Anatomy of an Item](https://www.dynamodbguide.com/anatomy-of-an-item/)
--[JSON to DynamoDB JSON](https://dynobase.dev/dynamodb-json-converter-tool/#:~:text=DynamoDB%20Converter%20Tool,a%20DynamoDB%2Dcompatible%20JSON%20format.)
+-[JSON to DynamoDB JSON Tool](https://dynobase.dev/dynamodb-json-converter-tool/#:~:text=DynamoDB%20Converter%20Tool,a%20DynamoDB%2Dcompatible%20JSON%20format.)
+- [DynamoDB JSON Mapper Library](https://www.npmjs.com/package/dynamodb)
 
 
 # Notes
-- DynamoDB is "similar" to MongoDB
+- DynamoDB is "similar" to MongoDB (DDB requires JSON mapping... boo)
 - No defined schema
 
 # Attributes
