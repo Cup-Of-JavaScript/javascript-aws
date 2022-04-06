@@ -20,7 +20,7 @@ const queryParams = {
 };
 
 
-const upload = async () => {
+const insert = async () => {
     try {
         await ddb.putItem(uploadParams).promise();
         console.log("ok")
@@ -30,10 +30,10 @@ const upload = async () => {
     }
 }
 
-const query = async () => {
+const getItem = async () => {
     const r = await ddb.getItem(queryParams).promise();
     console.log(r);
 }
 
-//upload();
-query();
+//insert();
+getItem();
