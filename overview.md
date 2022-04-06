@@ -10,6 +10,10 @@
 
 - The cloud is spongy!  Some things take awhile to propogate/activate.
 - Avoid using the root account as your "goto" account
+- Create three billing alarms:
+  - $1.00/day
+  - $1.50/day
+  - $2.00/day
 
 # Videos
 - [AWS Foundations: Getting Started with the AWS Cloud Essentials 66min](https://app.pluralsight.com/course-player?clipId=d9197e74-8d70-45c2-a951-0ad7845e3daa)
