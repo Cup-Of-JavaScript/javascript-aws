@@ -28,11 +28,10 @@ Name your function using the following schema: sia-{your initials}-upload-s3
 Create a managed policy and attach it to the execution role for your lambda function.  This new policy provides write access to the S3 bucket: `sia-test-2`.
 
 # Ex. 4  IAM Bucket Policy
-Create an S3 bucket with the following naming schema: `sia-<your initials>-secure-upload`.
+Create an S3 bucket with the following naming schema: `sia-{STUDENT_ID}-secure-upload`.
 
 Create a bucket policy that only allows you to upload a file from your home computer and attach it to this bucket.
 
 # Ex. 5 API GW
-
-
+Create a POST route with the following schema: `/{STUDENT_ID}/upload`.  Create a Lambda integration that calls a Lambda file to upload a file to S3.  Attach the Lambda integration to this Route, deploy the API, and call this route using Postman.
 
