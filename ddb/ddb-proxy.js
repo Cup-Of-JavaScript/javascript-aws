@@ -7,13 +7,15 @@
 //   Table: Customer
 //   Partition Key: customerId
 //   Sort Key: <None>
+// Links:
+//   https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html
 //
 
 const AWS = require('aws-sdk');
 AWS.config.update({region: 'us-east-1'});
 
-const ddbc = new AWS.DynamoDB.DocumentClient;
 const ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
+const ddbc = new AWS.DynamoDB.DocumentClient({apiVersion: '2012-08-10'});
 
 const TABLE_NAME = "Customer";
 
@@ -120,10 +122,62 @@ exports.dcGetItem = async (keyValue) => {
             TableName: TABLE_NAME,
             Key: {"customerId": keyValue}
         };
-        let r = await ddbc.get(params).promise();
-        return r;
+        return await ddbc.get(params).promise();
     }
     catch(e) {
         console.log(e);
     }
 }
+
+exports.dcQuery = async () => {
+    try {
+        var params = {
+            TableName: 'Customer',
+            ExpressionAttributeValues: {
+              ':id': 1
+            },
+            KeyConditionExpression: 'customerId = :id',
+        };
+        return await ddbc.query(params).promise();
+    }
+    catch(e) {
+        console.log(e);
+    }
+}
+
+exports.dcUpdate = async (customerId, firstName, lastName) => {
+    try {
+        var params = {
+            TableName: 'Customer',
+            Key: {
+                'customerId' : customerId
+            },
+            UpdateExpression: 'set firstName = :fn, lastName = :ln',
+            ExpressionAttributeValues: {
+              ':fn' : firstName,
+              ':ln' : lastName
+            }
+        };
+        return await ddbc.update(params).promise();
+    }
+    catch(e) {
+        console.log(e);
+    }
+}
+
+exports.dcDelete = async (customerId) => {
+    try {
+        var params = {
+            TableName: 'Customer',
+            Key: {
+                'customerId' : customerId
+            }
+        };
+        await ddbc.delete(params).promise();
+        return "ok";
+    }
+    catch(e) {
+        console.log(e);
+    }
+}
+

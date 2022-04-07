@@ -5,6 +5,7 @@
 -[JSON to DynamoDB JSON Tool](https://dynobase.dev/dynamodb-json-converter-tool/#:~:text=DynamoDB%20Converter%20Tool,a%20DynamoDB%2Dcompatible%20JSON%20format.)
 - [DynamoDB JSON Mapper Library](https://www.npmjs.com/package/dynamodb)
 
+
 # Three Ways to Interact with DynamoDB
 - Native
 - [Document Client](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html)
@@ -17,11 +18,12 @@
 # Querying
 - [Native DDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.04.html)
 - [PartiQL](https://abba.dev/blog/dynamodb-partiql-javascript)
-
+-[Examples](https://www.fernandomc.com/posts/eight-examples-of-fetching-data-from-dynamodb-with-node/)
 
 # Notes
 - DynamoDB is "similar" to MongoDB (DDB requires JSON mapping... boo)
 - No defined schema
+- Up to us to create unique ids
 
 # Attributes
 - Item (a row)
