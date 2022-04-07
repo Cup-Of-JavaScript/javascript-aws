@@ -2,7 +2,7 @@
 
 # Getting Started
 - Clone this repo
-- Install dependencies
+- Install dependencies: `npm install`
 
 # Contents
 - [Overview](overview.md)
