@@ -9,20 +9,23 @@ const main = async () => {
     // }
     //await ddbProxy.pInsertItem(d);
 
-    const i = {
-        CUSTOMER_ID: 6, // Partion key is required.
-        firstName: "Marty", 
-        lastName: "Burolla",
-        age: 19, 
-        cats: [
-            {
-                name: "Gypsy", 
-                color: "black"
-            }
-        ]
-    }
-    await ddbProxy.dcInsertItem(i);
+    // const i = {
+    //     CUSTOMER_ID: 6, // Partion key is required.
+    //     firstName: "Marty", 
+    //     lastName: "Burolla",
+    //     age: 19, 
+    //     cats: [
+    //         {
+    //             name: "Gypsy", 
+    //             color: "black"
+    //         }
+    //     ]
+    // }
+    // await ddbProxy.dcInsertItem(i);
 
+
+    let r = await ddbProxy.dcGetItem(6);
+    console.log(r);
 
 }
 

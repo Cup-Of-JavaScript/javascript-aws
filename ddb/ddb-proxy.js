@@ -1,9 +1,15 @@
+//
+// File: ddb-proxy.js
+// Auth: Martin Burolla
+// Date: 4/7/2022
+// Desc: Uses three types of approaches to access DynamoDB.
+//
+
 const AWS = require('aws-sdk');
 AWS.config.update({region: 'us-east-1'});
 
-const ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
-
 const ddbc = new AWS.DynamoDB.DocumentClient;
+const ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
 //
 // Native
@@ -42,7 +48,7 @@ const queryParams = {
     }
 };
 
-exports.insert = async () => {
+exports.nInsert = async () => {
     try {
         await ddb.putItem(uploadParams).promise();
         return "ok";
@@ -52,7 +58,7 @@ exports.insert = async () => {
     }
 }
 
-exports.getItem = async () => {
+exports.nGetItem = async () => {
     const r = await ddb.getItem(getItemParams).promise();
     const b = JSON.parse(r.Item.CUSTOMER_NAME.S);
     return b;
@@ -96,6 +102,21 @@ exports.dcInsertItem = async (item) => {
         };
         await ddbc.put(params).promise();
         return "ok";
+    }
+    catch(e) {
+        console.log(e);
+    }
+}
+
+exports.dcGetItem = async (keyValue) => {
+    try {
+        const params = {
+            TableName: "CUSTOMER_LIST",
+            Key: {'CUSTOMER_ID': keyValue}
+        };
+        let r = await ddbc.get(params).promise();
+        let c = AWS.DynamoDB.Converter.unmarshall(r.Item.cats);
+        return r;
     }
     catch(e) {
         console.log(e);

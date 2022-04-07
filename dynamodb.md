@@ -7,9 +7,12 @@
 
 # Three Ways to Interact with DynamoDB
 - Native
-- Document Client
+- [Document Client](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html)
 - PartiQL
 
+# Pros & Cons
+- Pros: Fast, scaleable, relatively easy
+- Cons: Does not like highly nested data
 
 # Querying
 - [Native DDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.04.html)
