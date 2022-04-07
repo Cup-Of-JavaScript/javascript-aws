@@ -11,6 +11,7 @@
 - [PartiQL](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
 
 # DynamoDB Proxy
+These files show how to interact with DynamoDB
 - [DDB-Proxy](./ddb/ddb-proxy.js)
 - [Client](./ddb/test.js)
 
