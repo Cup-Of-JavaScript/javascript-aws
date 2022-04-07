@@ -60,13 +60,12 @@ const native = async () => {
     // INSERT ONE
     // const r = await ddbProxy.nInsert(4, "John", "Doe");
 
-    const r = await ddbProxy.nGetItem(3); // TODO
-
-    //const r = await ddbProxy.nQuery(3); // TODO
+    // SELECT ONE
+    // const r = await ddbProxy.nGetItem(3);
 
     console.log(r);
 }
 
-//documentClient();
+documentClient();
 //partiQL();
-native();
+//native();

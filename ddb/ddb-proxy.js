@@ -5,10 +5,8 @@
 // Desc: Uses three types of approaches to access DynamoDB.
 // Schema: 
 //   Table: Customer
-//   Partition Key: customerId
+//   Partition Key: customerId Type: Number
 //   Sort Key: <None>
-// Links:
-//   https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html
 //
 
 const AWS = require('aws-sdk');
@@ -22,13 +20,6 @@ const TABLE_NAME = "Customer";
 //
 // Native
 //
-
-// const d = {
-//     firstName: "Marty", 
-//     lastName: "Burolla", 
-//     cats: ['Gypsy']
-// }
-
 
 exports.nInsert = async (customerId, firstName, lastName) => {
     const uploadParams = {
@@ -61,21 +52,6 @@ exports.nGetItem = async (customerId) => {
     const r = await ddb.getItem(getItemParams).promise();
     // const b = JSON.parse(r.Item.CUSTOMER_NAME.S);
     return r;
-}
-
-exports.nQuery = async () => {
-    const queryParams = {
-        TableName : "Customer",
-        KeyConditionExpression: "#id = :id",
-        ExpressionAttributeNames:{
-            "#id": "customerId"
-        },
-        ExpressionAttributeValues: {
-            ":id": 4
-        }
-    };
-    const r = await ddb.query(queryParams).promise();
-    console.log(r);
 }
 
 //
@@ -136,7 +112,6 @@ exports.pDelete = async (customerId) => {
         console.log(e);
     }
 }
-
 
 //
 // Document Client
@@ -220,4 +195,3 @@ exports.dcDelete = async (customerId) => {
         console.log(e);
     }
 }
-
