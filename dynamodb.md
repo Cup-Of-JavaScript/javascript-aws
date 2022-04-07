@@ -7,9 +7,7 @@
 
 
 # DynamoDB Datatypes
-- [DataTypes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.DataTypes.html)
-
-- Scalar (One value at a time): `String`, `Integer`, `Null`, `Boolean`
+[DataTypes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.DataTypes.html)
 - All Numbers: "N"
 - Strings: "S"
 - Document (Multiple values of different types) "BOOL"
