@@ -14,7 +14,7 @@
 # DynamoDB Datatypes
 - [DataTypes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.DataTypes.html)
 - All Numbers: "N"
-- Strings: "S"
+- Strings: "S" (Useful for storing documents `JSON.parse()`, `JSON.stringify()`)
 - Document (Multiple values of different types) "BOOL"
 - Set  (Multiple values of the same type) "SS", "NS", "BS"
 - List (arrays []) "L"
