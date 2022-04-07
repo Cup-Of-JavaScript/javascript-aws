@@ -67,7 +67,6 @@ const native = async () => {
     console.log(r);
 }
 
-
 //documentClient();
 //partiQL();
 native();
