@@ -23,34 +23,14 @@ const TABLE_NAME = "Customer";
 // Native
 //
 
-const d = {
-    firstName: "Marty", 
-    lastName: "Burolla", 
-    cats: ['Gypsy']
-}
+// const d = {
+//     firstName: "Marty", 
+//     lastName: "Burolla", 
+//     cats: ['Gypsy']
+// }
 
-
-const getItemParams = {
-    TableName: 'CUSTOMER_LIST',
-    Key: {
-      'CUSTOMER_ID': {N: '003'}
-    },
-    ProjectionExpression: 'CUSTOMER_NAME'
-};
-
-const queryParams = {
-    TableName : "CUSTOMER_LIST",
-    KeyConditionExpression: "#yr = :yyyy",
-    ExpressionAttributeNames:{
-        "#yr": "year"
-    },
-    ExpressionAttributeValues: {
-        ":yyyy": 1985
-    }
-};
 
 exports.nInsert = async (customerId, firstName, lastName) => {
-
     const uploadParams = {
         TableName: 'Customer',
         Item: {
@@ -69,10 +49,33 @@ exports.nInsert = async (customerId, firstName, lastName) => {
     }
 }
 
-exports.nGetItem = async () => {
+exports.nGetItem = async (customerId) => {
+    const getItemParams = {
+        TableName: 'Customer',
+        Key: {
+          'customerId': {N: String(customerId)}
+        },
+        ProjectionExpression: 'firstName'
+    };
+
     const r = await ddb.getItem(getItemParams).promise();
-    const b = JSON.parse(r.Item.CUSTOMER_NAME.S);
-    return b;
+    // const b = JSON.parse(r.Item.CUSTOMER_NAME.S);
+    return r;
+}
+
+exports.nQuery = async () => {
+    const queryParams = {
+        TableName : "Customer",
+        KeyConditionExpression: "#id = :id",
+        ExpressionAttributeNames:{
+            "#id": "customerId"
+        },
+        ExpressionAttributeValues: {
+            ":id": 4
+        }
+    };
+    const r = await ddb.query(queryParams).promise();
+    console.log(r);
 }
 
 //
