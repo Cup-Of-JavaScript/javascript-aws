@@ -19,9 +19,21 @@ const documentClient = async () => {
     // }
     // const r = await ddbProxy.dcInsertItem(customer);
 
+    // INSERT JS BLOB
+    // const data = {
+    //     firstName: "Joe",
+    //     lastName: "Smith",
+    //     cats: ["Gypsy", "Lily"],
+    //     age: 33
+    // }
+    // const r = await ddbProxy.dcInsertInfoForCustomerId(5, data);
+
     // SELECT ONE
     // const customerId = 1;
     // const r = await ddbProxy.dcGetItem(customerId);
+
+    // SELECT INFO
+    //const r = await ddbProxy.dcGetInfoForCustomer(5);
 
     // QUERY
     // const r = await ddbProxy.dcQuery();

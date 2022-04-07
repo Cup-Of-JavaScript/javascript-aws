@@ -131,6 +131,24 @@ exports.dcInsertItem = async (item) => {
     }
 }
 
+exports.dcInsertInfoForCustomerId = async (customerId, info) => {
+    try {
+        const data = {
+            customerId: customerId,
+            info: JSON.stringify(info)
+        }
+        const params = {
+            TableName: TABLE_NAME,
+            Item: data
+        };
+        await ddbc.put(params).promise();
+        return "ok";
+    }
+    catch(e) {
+        console.log(e);
+    }
+}
+
 exports.dcGetItem = async (keyValue) => {
     try {
         const params = {
@@ -138,6 +156,20 @@ exports.dcGetItem = async (keyValue) => {
             Key: {"customerId": keyValue}
         };
         return await ddbc.get(params).promise();
+    }
+    catch(e) {
+        console.log(e);
+    }
+}
+
+exports.dcGetInfoForCustomer = async (customerId) => {
+    try {
+        const params = {
+            TableName: TABLE_NAME,
+            Key: {"customerId": customerId}
+        };
+        const r = await ddbc.get(params).promise();
+        return JSON.parse(r.Item.info);
     }
     catch(e) {
         console.log(e);
