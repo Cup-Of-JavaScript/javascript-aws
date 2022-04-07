@@ -3,6 +3,12 @@ AWS.config.update({region: 'us-east-1'});
 
 const ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
+const ddbc = new AWS.DynamoDB.DocumentClient;
+
+//
+// Native
+//
+
 const d = {
     firstName: "Marty", 
     lastName: "Burolla", 
@@ -25,7 +31,7 @@ const getItemParams = {
     ProjectionExpression: 'CUSTOMER_NAME'
 };
 
-var queryParams = {
+const queryParams = {
     TableName : "CUSTOMER_LIST",
     KeyConditionExpression: "#yr = :yyyy",
     ExpressionAttributeNames:{
@@ -52,11 +58,44 @@ exports.getItem = async () => {
     return b;
 }
 
-exports.queryItems = async () => {
+//
+// PartiQL
+//
+
+exports.pQueryItems = async (customerName) => {
     try {
-        const statement = `select * from CUSTOMER_LIST where CUSTOMER_NAME = 'Marty Burolla' `
+        const statement = `select * from CUSTOMER_LIST where CUSTOMER_NAME = '${customerName}'`
         const r = await ddb.executeStatement({Statement: statement}).promise();
         return AWS.DynamoDB.Converter.unmarshall(r.Items[0])
+    }
+    catch(e) {
+        console.log(e);
+    }
+}
+
+exports.pInsertItem = async (item) => {
+    try {
+        const statement = `insert into CUSTOMER_LIST value ${JSON.stringify(item)}`
+        const r = await ddb.executeStatement({Statement: statement}).promise();
+        return AWS.DynamoDB.Converter.unmarshall(r.Items[0])
+    }
+    catch(e) {
+        console.log(e);
+    }
+}
+
+//
+// Document Client
+//
+
+exports.dcInsertItem = async (item) => {
+    try {
+        const params = {
+            TableName: "CUSTOMER_LIST",
+            Item: item
+        };
+        await ddbc.put(params).promise();
+        return "ok";
     }
     catch(e) {
         console.log(e);

@@ -5,6 +5,11 @@
 -[JSON to DynamoDB JSON Tool](https://dynobase.dev/dynamodb-json-converter-tool/#:~:text=DynamoDB%20Converter%20Tool,a%20DynamoDB%2Dcompatible%20JSON%20format.)
 - [DynamoDB JSON Mapper Library](https://www.npmjs.com/package/dynamodb)
 
+# Three Ways to Interact with DynamoDB
+- Native
+- Document Client
+- PartiQL
+
 
 # Querying
 - [Native DDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.04.html)
