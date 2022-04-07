@@ -38,12 +38,19 @@ const documentClient = async () => {
 const partiQL = async () => {
 
     // INSERT ONE
-    await ddbProxy.pInsertItem(2, "Fred", "Jones");
+    // await ddbProxy.pInsertItem(3, "Patty", "Same");
 
     // SELECT ONE
     // const r = await ddbProxy.pGetItem(1);
 
+    // QUERY
+    // const r = await ddbProxy.pQuery(2);
 
+    // UPDATE
+    // const r = await ddbProxy.pUpdate(3, "Patty2", "Same2");
+
+    // DELETE
+    // const r = await ddbProxy.pDelete(2);
 
     console.log(r);
 

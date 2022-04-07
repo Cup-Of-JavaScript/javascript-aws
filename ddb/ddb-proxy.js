@@ -98,6 +98,40 @@ exports.pInsertItem = async (customerId, firstName, lastName) => {
     }
 }
 
+exports.pQuery = async (customerId) => {
+    try {
+        const statement = `select * from Customer where customerId >= ${customerId}`;
+        const r = await ddb.executeStatement({Statement: statement}).promise();
+        return r.Items.map(i => AWS.DynamoDB.Converter.unmarshall(i)); // Removes the data type indicators from DDB JSON ("N", "S", etc)
+    }
+    catch(e) {
+        console.log(e);
+    }
+}
+
+exports.pUpdate = async (customerId, firstName, lastName) => {
+    try {
+        const statement = `update Customer set firstName='${firstName}' set lastName='${lastName}' where customerId = ${customerId}`;
+        const r = await ddb.executeStatement({Statement: statement}).promise();
+        return "ok";
+    }
+    catch(e) {
+        console.log(e);
+    }
+}
+
+exports.pDelete = async (customerId) => {
+    try {
+        const statement = `delete from Customer where customerId = ${customerId}`;
+        const r = await ddb.executeStatement({Statement: statement}).promise();
+        return "ok";
+    }
+    catch(e) {
+        console.log(e);
+    }
+}
+
+
 //
 // Document Client
 //
