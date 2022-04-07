@@ -3,6 +3,10 @@
 // Auth: Martin Burolla
 // Date: 4/7/2022
 // Desc: Uses three types of approaches to access DynamoDB.
+// Schema: 
+//   Table: Customer
+//   Partition Key: customerId
+//   Sort Key: <None>
 //
 
 const AWS = require('aws-sdk');
@@ -10,6 +14,8 @@ AWS.config.update({region: 'us-east-1'});
 
 const ddbc = new AWS.DynamoDB.DocumentClient;
 const ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
+
+const TABLE_NAME = "Customer";
 
 //
 // Native
@@ -97,7 +103,7 @@ exports.pInsertItem = async (item) => {
 exports.dcInsertItem = async (item) => {
     try {
         const params = {
-            TableName: "CUSTOMER_LIST",
+            TableName: TABLE_NAME,
             Item: item
         };
         await ddbc.put(params).promise();
@@ -111,11 +117,10 @@ exports.dcInsertItem = async (item) => {
 exports.dcGetItem = async (keyValue) => {
     try {
         const params = {
-            TableName: "CUSTOMER_LIST",
-            Key: {'CUSTOMER_ID': keyValue}
+            TableName: TABLE_NAME,
+            Key: {"customerId": keyValue}
         };
         let r = await ddbc.get(params).promise();
-        let c = AWS.DynamoDB.Converter.unmarshall(r.Item.cats);
         return r;
     }
     catch(e) {
