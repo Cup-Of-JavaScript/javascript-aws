@@ -6,6 +6,11 @@
 - [DynamoDB JSON Mapper Library](https://www.npmjs.com/package/dynamodb)
 
 
+# Querying
+- [Native DDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.04.html)
+- [PartiQL](https://abba.dev/blog/dynamodb-partiql-javascript)
+
+
 # Notes
 - DynamoDB is "similar" to MongoDB (DDB requires JSON mapping... boo)
 - No defined schema
