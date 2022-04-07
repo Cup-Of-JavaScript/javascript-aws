@@ -3,7 +3,7 @@
 - [Best Practice](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices.html)
 - [Anatomy of an Item](https://www.dynamodbguide.com/anatomy-of-an-item/)
 -[JSON to DynamoDB JSON Tool](https://dynobase.dev/dynamodb-json-converter-tool/#:~:text=DynamoDB%20Converter%20Tool,a%20DynamoDB%2Dcompatible%20JSON%20format.)
-- [DynamoDB JSON Mapper Library](https://www.npmjs.com/package/dynamodb)
+
 
 # Three Ways to Read/Write with DynamoDB
 - [Native](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html)
