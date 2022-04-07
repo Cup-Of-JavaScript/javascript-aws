@@ -57,7 +57,7 @@ The endpoint accepts the following data and stores it into a Customer table in D
 
 # Ex. 8 DynamoDB Read
 
-Create an Express web API with the following endpoint:
+Update the Express web API in Ex. 7 with the following new endpoint:
 
 ```
 GET http://localhost:5150/customer/{id}
