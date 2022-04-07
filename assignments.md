@@ -46,7 +46,7 @@ POST http://localhost:5150/customer
 The endpoint accepts the following data and stores it into a Customer table in DynamoDB
 ```
 {
-    "customerId": 7,
+    "customerId": <YOUR STUDENT ID>,
     "firstName": "Paul", 
     "lastName": "Simmon",
     "age": 54, 
@@ -60,7 +60,7 @@ The endpoint accepts the following data and stores it into a Customer table in D
 Update the Express web API in Ex. 7 with the following new endpoint:
 
 ```
-GET http://localhost:5150/customer/{id}
+GET http://localhost:5150/customer/{YOUR STUDENT ID}
 ```
 
 This endpoint returns all the information for this customer from DynamoDB.
