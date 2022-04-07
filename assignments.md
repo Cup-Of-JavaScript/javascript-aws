@@ -57,5 +57,21 @@ The endpoint accepts the following data and stores it into a Customer table in D
 
 # Ex. 8 DynamoDB Read
 
+Create an Express web API with the following endpoint:
 
+```
+GET http://localhost:5150/customer/{id}
+```
 
+This endpoint returns all the information for this customer from DynamoDB.
+
+Example:
+```
+{
+    "zip": 23111,
+    "firstName": "Paul",
+    "lastName": "Simmons",
+    "customerId": 7,
+    "age": 54
+}
+```
