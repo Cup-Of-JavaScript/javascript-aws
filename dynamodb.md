@@ -4,7 +4,6 @@
 - [Anatomy of an Item](https://www.dynamodbguide.com/anatomy-of-an-item/)
 - [JSON to DynamoDB JSON Tool](https://dynobase.dev/dynamodb-json-converter-tool/#:~:text=DynamoDB%20Converter%20Tool,a%20DynamoDB%2Dcompatible%20JSON%20format.)
 
-
 # Three Ways to Read/Write with DynamoDB
 - [Native](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html)
 - [Document Client](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html)
