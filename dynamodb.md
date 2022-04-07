@@ -58,7 +58,7 @@ await ddbc.put(params).promise();
 # Querying
 - [Native DDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.04.html)
 - [PartiQL](https://abba.dev/blog/dynamodb-partiql-javascript)
--[Examples](https://www.fernandomc.com/posts/eight-examples-of-fetching-data-from-dynamodb-with-node/)
+- [Examples](https://www.fernandomc.com/posts/eight-examples-of-fetching-data-from-dynamodb-with-node/)
 
 # Notes
 - DynamoDB is "similar" to MongoDB
