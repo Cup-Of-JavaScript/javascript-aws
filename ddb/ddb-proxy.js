@@ -29,13 +29,6 @@ const d = {
     cats: ['Gypsy']
 }
 
-const uploadParams = {
-  TableName: 'CUSTOMER_LIST',
-  Item: {
-    'CUSTOMER_ID' : {N: '003'}, 
-    'CUSTOMER_NAME' : {S: JSON.stringify(d)}
-  }
-};
 
 const getItemParams = {
     TableName: 'CUSTOMER_LIST',
@@ -56,7 +49,17 @@ const queryParams = {
     }
 };
 
-exports.nInsert = async () => {
+exports.nInsert = async (customerId, firstName, lastName) => {
+
+    const uploadParams = {
+        TableName: 'Customer',
+        Item: {
+          'customerId' : {N: String(customerId)}, 
+          'firstName' : {S: firstName},
+          'lastName' : {S: lastName}
+        }
+    };
+      
     try {
         await ddb.putItem(uploadParams).promise();
         return "ok";

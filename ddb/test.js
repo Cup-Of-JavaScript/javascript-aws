@@ -53,14 +53,19 @@ const partiQL = async () => {
     // const r = await ddbProxy.pDelete(2);
 
     console.log(r);
-
 }
 
 const native = async () => {
 
+    // INSERT ONE
+    // const r = await ddbProxy.nInsert(4, "John", "Doe");
+
+
+
+    console.log(r);
 }
 
 
 //documentClient();
-partiQL();
-// native();
+//partiQL();
+native();
