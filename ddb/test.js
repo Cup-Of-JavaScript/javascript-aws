@@ -9,7 +9,7 @@ const ddbProxy = require('./ddb-proxy.js');
 
 const documentClient = async () => {
    
-    // Insert One
+    // INSERT ONE
     // const customer = {
     //     customerId: 2,
     //     firstName: "Marty", 
@@ -19,37 +19,41 @@ const documentClient = async () => {
     // }
     // const r = await ddbProxy.dcInsertItem(customer);
 
-    // Select One
+    // SELECT ONE
     // const customerId = 1;
     // const r = await ddbProxy.dcGetItem(customerId);
 
-    // Query
+    // QUERY
     // const r = await ddbProxy.dcQuery();
 
-    // Update
+    // UPDATE
     // const r = await ddbProxy.dcUpdate(1, "John", "Smith");
 
-    // Delete
+    // DELETE
     //const r = await ddbProxy.dcDelete(1);
 
     console.log(r);
+}
+
+const partiQL = async () => {
+
+    // INSERT ONE
+    //await ddbProxy.pInsertItem(1, "Joe", "Plumber");
+
+    // SELECT ONE
+    // const r = await ddbProxy.pGetItem(1);
+
+    
+
+    console.log(r);
+
 }
 
 const native = async () => {
 
 }
 
-const partiQL = async () => {
-    //const r = await ddbProxy.pQueryItems('Marty Burolla');
 
-    // const d = {
-    //     CUSTOMER_ID: 4,
-    //     CUSTOMER_NAME: "test"
-    // }
-    //await ddbProxy.pInsertItem(d);
-}
-
-
-documentClient();
+//documentClient();
+partiQL();
 // native();
-// partiQL();

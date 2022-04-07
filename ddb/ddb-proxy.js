@@ -76,9 +76,9 @@ exports.nGetItem = async () => {
 // PartiQL
 //
 
-exports.pQueryItems = async (customerName) => {
+exports.pGetItem= async (customerId) => {
     try {
-        const statement = `select * from CUSTOMER_LIST where CUSTOMER_NAME = '${customerName}'`
+        const statement = `select * from Customer where customerId = ${customerId}`
         const r = await ddb.executeStatement({Statement: statement}).promise();
         return AWS.DynamoDB.Converter.unmarshall(r.Items[0])
     }
@@ -87,11 +87,11 @@ exports.pQueryItems = async (customerName) => {
     }
 }
 
-exports.pInsertItem = async (item) => {
+exports.pInsertItem = async (customerId, firstName, lastName) => {
     try {
-        const statement = `insert into CUSTOMER_LIST value ${JSON.stringify(item)}`
+        const statement = `insert into Customer value {'customerId' : ${customerId}, 'firstName': '${firstName}', 'lastName': '${lastName}'}`
         const r = await ddb.executeStatement({Statement: statement}).promise();
-        return AWS.DynamoDB.Converter.unmarshall(r.Items[0])
+        return "ok"
     }
     catch(e) {
         console.log(e);
