@@ -6,40 +6,17 @@
 - [DynamoDB JSON Mapper Library](https://www.npmjs.com/package/dynamodb)
 
 
-# Three Ways to Interact with DynamoDB
-- [Native](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html)
-- [Document Client](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html)
-- [PartiQL](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
-
-# Pros & Cons
-- Pros: Fast, scaleable, relatively easy
-- Cons: Does not like highly nested data
-
-# Querying
-- [Native DDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.04.html)
-- [PartiQL](https://abba.dev/blog/dynamodb-partiql-javascript)
--[Examples](https://www.fernandomc.com/posts/eight-examples-of-fetching-data-from-dynamodb-with-node/)
-
-# Notes
-- DynamoDB is "similar" to MongoDB (DDB requires JSON mapping... boo)
-- No defined schema
-- Up to us to create unique ids
-
-# Attributes
-- Item (a row)
-- Attribute (a column)
-- Table (A collection of items)
-
-# Keys
-- Primary Keys => Partition key
-- Compositie Key => Partition key & sort key (Used to ensure uniqueness)
-
-# Allowed Datatypes
+# DynamoDB Datatypes
+- [DataTypes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.DataTypes.html)
 - Scalar (One value at a time): `String`, `Integer`, `Null`, `Boolean`
-- Document (Multiple values of different types)
-- Set  (Multiple values of the same type)
+- All Numbers: "N"
+- Strings: "S"
+- Document (Multiple values of different types) "BOOL"
+- Set  (Multiple values of the same type) "SS", "NS", "BS"
 - List (arrays []) "L"
 - Map  (dictionary {}) "M"
+
+- When reading/writing from/to DynamoDB NATIVELY, we must specify the data types in our data.  For example:
 
 ```
 {
@@ -64,17 +41,50 @@
 }
 ```
 
+However when using the Document Client, we can avoid specifying the data types:
+
+```
+const params = {
+    TableName: TABLE_NAME,
+    Item: item // <== Can be any JavaScript flat object.
+};
+await ddbc.put(params).promise();
+
+```
+
+# Three Ways to Interact with DynamoDB
+- [Native](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html)
+- [Document Client](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html)
+- [PartiQL](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
+
+# Pros & Cons
+- Pros: Fast, scaleable, relatively easy
+- Cons: Does not like highly nested data
+
+# Querying
+- [Native DDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.04.html)
+- [PartiQL](https://abba.dev/blog/dynamodb-partiql-javascript)
+-[Examples](https://www.fernandomc.com/posts/eight-examples-of-fetching-data-from-dynamodb-with-node/)
+
+# Notes
+- DynamoDB is "similar" to MongoDB
+- No defined schema unlike reltional databases, however DynamoDB is easy to use with flat documents
+- Up to us to create unique ids for documents
+
+# Attributes
+- Item (a row)
+- Attribute (a column)
+- Table (A collection of items)
+
+# Keys
+- Primary Keys => Partition key
+- Compositie Key => Partition key & sort key (Used to ensure uniqueness)
+
 # Secondary Index
 - Indexs that allow querying target attributes
-- 
 
 # Capacity Units
 - Write Capacity Unit (WCU): 1 write operation per second of 1KB
 - Read Capacity Unit (RCU): 1 or 2 read operations per second of 4KB
   - Eventual consistency $ (reading data before it has been throughly stored - dirty reads)
   - Strong consistency $$$ (reading the most up-to-date data after being replicated)
-
-
-
-https://youtu.be/QLkkexbQ0qs
-
