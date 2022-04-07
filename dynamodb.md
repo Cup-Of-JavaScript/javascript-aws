@@ -10,11 +10,6 @@
 - [Document Client](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html)
 - [PartiQL](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
 
-# DynamoDB Proxy
-These files show how to interact with DynamoDB
-- [DDB-Proxy](./ddb/ddb-proxy.js)
-- [Client](./ddb/test.js)
-
 # DynamoDB Datatypes
 - [DataTypes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.DataTypes.html)
 - All Numbers: "N"
@@ -59,15 +54,15 @@ await ddbc.put(params).promise();
 
 ```
 
+# DynamoDB Proxy
+These files show the three ways to interact with DynamoDB:
+- [DDB-Proxy](./ddb/ddb-proxy.js)
+- [Client](./ddb/test.js)
+
 # Querying
 - [Native DDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.04.html)
 - [PartiQL](https://abba.dev/blog/dynamodb-partiql-javascript)
 - [Examples](https://www.fernandomc.com/posts/eight-examples-of-fetching-data-from-dynamodb-with-node/)
-
-# Notes
-- DynamoDB is "similar" to MongoDB
-- No defined schema unlike reltional databases, however DynamoDB is easy to use with flat documents
-- Up to us to create unique ids for documents
 
 # Attributes
 - Item (a row)
