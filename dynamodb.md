@@ -9,6 +9,7 @@
 - [Native](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html)
 - [Document Client](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html)
 - [PartiQL](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
+- [DDB-Proxy](./ddb/ddb-proxy.js)
 
 # DynamoDB Datatypes
 - [DataTypes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.DataTypes.html)
@@ -43,7 +44,7 @@
 }
 ```
 
-However when using the Document Client, we can avoid specifying the data types:
+However when using the `DocumentClient`, we can avoid specifying the data types:
 
 ```
 const params = {
