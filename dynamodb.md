@@ -43,7 +43,7 @@
 }
 ```
 
-However when using the `DocumentClient`, we can avoid specifying the data types:
+However when using the `DocumentClient`, we can avoid specifying the data types in our data:
 
 ```
 const params = {
