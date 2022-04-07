@@ -5,15 +5,14 @@
 -[JSON to DynamoDB JSON Tool](https://dynobase.dev/dynamodb-json-converter-tool/#:~:text=DynamoDB%20Converter%20Tool,a%20DynamoDB%2Dcompatible%20JSON%20format.)
 - [DynamoDB JSON Mapper Library](https://www.npmjs.com/package/dynamodb)
 
-
 # DynamoDB Datatypes
+- [DataTypes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.DataTypes.html)
 - All Numbers: "N"
 - Strings: "S"
 - Document (Multiple values of different types) "BOOL"
 - Set  (Multiple values of the same type) "SS", "NS", "BS"
 - List (arrays []) "L"
 - Map  (dictionary {}) "M"
-
 - When reading/writing from/to DynamoDB NATIVELY, we must specify the data types in our data.  For example:
 
 ```
