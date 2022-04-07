@@ -11,14 +11,14 @@ const documentClient = async () => {
    
     // INSERT ONE
     // Works fine for a flat structure.
-    // const customer = {
-    //     customerId: 2,
-    //     firstName: "Marty", 
-    //     lastName: "Burolla",
-    //     age: 19, 
-    //     zip: 14519
-    // }
-    // const r = await ddbProxy.dcInsertItem(customer);
+    const customer = {
+        customerId: 2,
+        firstName: "Tom", 
+        lastName: "Thumb",
+        age: 17, 
+        zip: 14580
+    }
+    const r = await ddbProxy.dcInsertItem(customer);
 
     // INSERT JS BLOB
     // Works for any type of nested structure.
