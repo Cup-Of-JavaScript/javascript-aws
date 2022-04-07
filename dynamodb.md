@@ -9,7 +9,10 @@
 - [Native](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html)
 - [Document Client](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html)
 - [PartiQL](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
+
+# DynamoDB Proxy
 - [DDB-Proxy](./ddb/ddb-proxy.js)
+- [Client](./ddb/test.js)
 
 # DynamoDB Datatypes
 - [DataTypes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.DataTypes.html)
