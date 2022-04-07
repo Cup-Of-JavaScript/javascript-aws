@@ -10,6 +10,7 @@ const ddbProxy = require('./ddb-proxy.js');
 const documentClient = async () => {
    
     // INSERT ONE
+    // Works fine for a flat structure.
     // const customer = {
     //     customerId: 2,
     //     firstName: "Marty", 
@@ -20,13 +21,21 @@ const documentClient = async () => {
     // const r = await ddbProxy.dcInsertItem(customer);
 
     // INSERT JS BLOB
+    // Works for any type of nested structure.
     // const data = {
     //     firstName: "Joe",
     //     lastName: "Smith",
-    //     cats: ["Gypsy", "Lily"],
+    //     cats: [{
+    //             name: "Gypsy",
+    //             color: "Black"
+    //         },
+    //         {
+    //             name: "Gabby",
+    //             color: "Brown"
+    //         }],
     //     age: 33
     // }
-    // const r = await ddbProxy.dcInsertInfoForCustomerId(5, data);
+    // const r = await ddbProxy.dcInsertInfoForCustomerId(6, data);
 
     // SELECT ONE
     // const customerId = 1;
