@@ -85,6 +85,10 @@ Create a Lambda function that returns the first name of a customer from the Dyna
 # Ex. 11 API GW --> Lambda --> DDB
 Create the following endpoint using the API Gateway:
 
+```
+/student<YOUR ID HERE>/ddb/{id}
+```
+
 ![](./docs/api-gw-route-ddb.png)
 
 This endpoint connects to a lambda function that returns the first name for a customer in the Customer table.
