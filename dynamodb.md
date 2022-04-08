@@ -112,7 +112,7 @@ A DynamoDB table has two keys:
 - Paritition Key
 - Sort Key
 
-The Sort key can be thought of as a secondary key (composite key) to help provide uniqueness in your table.
+The Sort key can be thought of as a secondary key (composite key) to help provide uniqueness in your table, but should really be used for sorting (as the name implies).
 
 Table scans can consume HUGE amounts of read capacity and hinder the performance of your application.  Shadow tables (copies) are useful for business queries that will not impact the user experience.
 
