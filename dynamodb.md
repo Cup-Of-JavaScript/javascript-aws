@@ -10,6 +10,12 @@
 - [PartiQL](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
 
 
+# Capacity Units
+- Write Capacity Unit (WCU): 1 write operation per second of 1KB
+- Read Capacity Unit (RCU): 1 or 2 read operations per second of 4KB
+  - Eventual consistency $ (reading data before it has been throughly stored - dirty reads)
+  - Strong consistency $$$ (reading the most up-to-date data after being replicated)
+
 
 # DynamoDB Datatypes
 - [DataTypes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.DataTypes.html)
@@ -157,8 +163,3 @@ Can also query index name:
 aws dynamodb scan --table-name Customer --index-name firstName-index --return-consumed-capacity INDEXES
 ```
 
-# Capacity Units
-- Write Capacity Unit (WCU): 1 write operation per second of 1KB
-- Read Capacity Unit (RCU): 1 or 2 read operations per second of 4KB
-  - Eventual consistency $ (reading data before it has been throughly stored - dirty reads)
-  - Strong consistency $$$ (reading the most up-to-date data after being replicated)
