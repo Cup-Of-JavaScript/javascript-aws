@@ -63,6 +63,24 @@ These files show the three ways to interact with DynamoDB:
 - [PartiQL](https://abba.dev/blog/dynamodb-partiql-javascript)
 - [Examples](https://www.fernandomc.com/posts/eight-examples-of-fetching-data-from-dynamodb-with-node/)
 
+# DynamoDB PartiQL
+DynamoDB supports a subset of the official PartiQL specification.  For example, the `like` keyword
+ is not supported in DynamoDB.  PartiQL does not support `join` operations with DynamoDB.
+
+[Statements](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
+[Functions](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-functions.html)
+
+#### Table Scan
+Avoid table scans by creating indexes for the fields (up to two) in your where clause.  The pricing details of an index is the same for tables.
+
+```
+Using the SELECT statement can result in a full table scan if an equality condition with a partition key is not provided in the WHERE clause.
+```
+Querying an Index:
+```
+SELECT * FROM "Customer"."firstName-index" where firstName = 'Tom'
+```
+
 # Attributes
 - Item (a row)
 - Attribute (a column)
