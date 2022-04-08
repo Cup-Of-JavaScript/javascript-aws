@@ -79,6 +79,21 @@ DynamoDB supports a subset of the official PartiQL specification.  For example, 
 [Statements](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
 [Functions](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-functions.html)
 
+Statements
+- Select
+- Update
+- Delete
+- Insert
+
+Functions
+- Exists
+- Begins_with
+- Missing
+- Attribute_type
+- Contains
+- Size
+
+
 #### Table Scan
 A DynamoDB table has two keys:
 - Primary Key
