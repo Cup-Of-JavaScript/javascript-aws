@@ -60,6 +60,12 @@ await ddbc.put(params).promise();
 - Table scans can be avoided by creating indexes for the target fields on a table
 - If your scenario requires heavily nested data and complex queries, a relational DB is probably a better choice
 - It is not possible to join tables with DynamoDB/PartiQL
+- To avoid a hot partition, design your partition key to include target attributes.
+
+![](hot-part.png)
+
+
+![](indiv-part.png)
 
 
 # DynamoDB Proxy
