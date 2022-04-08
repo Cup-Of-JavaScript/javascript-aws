@@ -66,6 +66,12 @@ await ddbc.put(params).promise();
 
 ![](./docs/indiv-part.png)
 
+Sort Key is useful for:
+- starts with
+- between
+- greater than
+- less than
+
 
 # DynamoDB Proxy
 These files show the three ways to interact with DynamoDB:
