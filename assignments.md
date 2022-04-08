@@ -77,11 +77,10 @@ Example:
 ```
 
 # Ex. 9 Lambda
-Basic
+Create a lambda function that returns the contents of the event object.  Copy and paste the JSON response in `jsonviewer.stack.hu` and view as a tree.
 
 # Ex. 10 Lambda --> DDB
-Create 
-
+Create a Lambda function that returns the first name of a customer from the DynamoDB Customer table.
 
 # Ex. 11 API GW --> Lambda --> DDB
 Create the following endpoint using the API Gateway:
@@ -100,9 +99,9 @@ Output:
 Paul
 ```
 
-Lambda test event:
+To test your lambda function without using the API GW, use the following test event:
 ```
 {
- "pathParameters":{"id":"7"}
+ "pathParameters":{"id":"<VALID CUSTOMER ID HERE>"}
 }
 ```
