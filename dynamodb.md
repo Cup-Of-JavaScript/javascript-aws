@@ -60,7 +60,10 @@ await ddbc.put(params).promise();
 - Table scans can be avoided by creating indexes for the target fields on a table
 - If your scenario requires heavily nested data and complex queries, a relational DB is probably a better choice
 - It is not possible to join tables with DynamoDB/PartiQL
+- DAX is a caching layer that can reduce DDB latency to microseconds (vs milliseconds)
+- Indexes are not replicated to other regions
 - To avoid a hot partition, design your partition key to include target attributes.
+
 
 ![](./docs/hot-part.png)
 
