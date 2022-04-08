@@ -72,21 +72,21 @@ Sort Key is useful for:
 - greater than
 - less than
 
-When creating an index, only include the Attribute Projections that you will need
+When creating an index, only include the Attribute Projections that you need:
 
 ![](./docs/attibute-projections.png)
 
 # DynamoDB Proxy
-These files show the three ways to interact with DynamoDB:
-- [DDB-Proxy](./ddb/ddb-proxy.js)
+These files in this repo show the three ways to interact with DynamoDB:
 - [Client](./ddb/test.js)
+- [DDB-Proxy](./ddb/ddb-proxy.js)
 
 # Querying
 - [Native DDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.04.html)
 - [PartiQL](https://abba.dev/blog/dynamodb-partiql-javascript)
 - [Examples](https://www.fernandomc.com/posts/eight-examples-of-fetching-data-from-dynamodb-with-node/)
 
-# PartiQL & DynamoDB
+#### PartiQL & DynamoDB
 DynamoDB supports a subset of the official PartiQL specification.  For example, the `like` keyword and `join` operations are not supported in DynamoDB.
 
 [Statements](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
