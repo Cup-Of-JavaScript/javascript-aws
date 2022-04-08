@@ -95,7 +95,7 @@ This endpoint connects to a lambda function that returns the first name for a cu
 
 URL:
 ```
-GET https://js48lhu1t0.execute-api.us-east-1.amazonaws.com/dev/ddb/7
+GET https://js48lhu1t0.execute-api.us-east-1.amazonaws.com/dev/student1/ddb/7
 ```
 
 Output:
