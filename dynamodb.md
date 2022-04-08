@@ -62,10 +62,9 @@ await ddbc.put(params).promise();
 - It is not possible to join tables with DynamoDB/PartiQL
 - To avoid a hot partition, design your partition key to include target attributes.
 
-![](hot-part.png)
+![](./docs/hot-part.png)
 
-
-![](indiv-part.png)
+![](./docs/indiv-part.png)
 
 
 # DynamoDB Proxy
