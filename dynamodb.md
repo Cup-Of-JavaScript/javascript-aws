@@ -1,4 +1,9 @@
 # DynamoDB
+Two parts to master DynamoDB:
+- How to read/write data
+- Table/index design
+
+# Resources
 - [AWS DynamoDB Fundamentals ~2h (Skip 4 & 5)](https://app.pluralsight.com/library/courses/aws-dynamodb-fundamentals/table-of-contents) (UI is old)
 - [Best Practice](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices.html)
 - [Anatomy of an Item](https://www.dynamodbguide.com/anatomy-of-an-item/)
@@ -9,6 +14,10 @@
 - [Document Client](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html) ([DynamoDB Client - AWS SDK for JavaScript v3](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-dynamodb/))
 - [PartiQL](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
 
+
+These files in this repo show the three ways to interact with DynamoDB:
+- [Client](./ddb/test.js)
+- [DDB-Proxy](./ddb/ddb-proxy.js)
 
 # Capacity Units
 - Write Capacity Unit (WCU): 1 write operation per second of 1KB
@@ -69,8 +78,7 @@ await ddbc.put(params).promise();
 - DAX is a caching layer that can reduce DDB latency to microseconds (vs milliseconds)
 - Indexes are not replicated to other regions
 - To avoid a hot partition, design your partition key to include target attributes.
-- [AWS DynamoDB Schema Design](https://youtu.be/XvD2FrS5yYM)
-
+- [AWS DynamoDB Schema Design 12m](https://youtu.be/XvD2FrS5yYM)
 
 ![](./docs/hot-part.png)
 
@@ -85,11 +93,6 @@ Sort Key is useful for:
 When creating an index, only include the Attribute Projections (fields/columns) that you need:
 
 ![](./docs/attibute-projections.png)
-
-# DynamoDB Proxy
-These files in this repo show the three ways to interact with DynamoDB:
-- [Client](./ddb/test.js)
-- [DDB-Proxy](./ddb/ddb-proxy.js)
 
 # Querying
 - [Native DDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.04.html)
