@@ -72,7 +72,7 @@ Sort Key is useful for:
 - greater than
 - less than
 
-When creating an index, only include the Attribute Projections that you need:
+When creating an index, only include the Attribute Projections (fields/columns) that you need:
 
 ![](./docs/attibute-projections.png)
 
