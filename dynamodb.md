@@ -71,7 +71,13 @@ DynamoDB supports a subset of the official PartiQL specification.  For example, 
 [Functions](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-functions.html)
 
 #### Table Scan
-Avoid table scans by creating indexes for the fields (up to two) in your where clause.  The pricing details of an index is the same for tables.
+A DynamoDB table has two keys:
+- Primary Key
+- Sort Key
+
+The Sort key can be thought of as a secondary key (composite key) to help provide uniqueness in your table.
+
+Avoid table scans by creating indexes for the field in your where clause.  The pricing details of an index is the same for tables.
 
 ```
 Using the SELECT statement can result in a full table scan if an equality condition with a partition key is not provided in the WHERE clause.
