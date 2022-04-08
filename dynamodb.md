@@ -72,9 +72,8 @@ These files show the three ways to interact with DynamoDB:
 - [PartiQL](https://abba.dev/blog/dynamodb-partiql-javascript)
 - [Examples](https://www.fernandomc.com/posts/eight-examples-of-fetching-data-from-dynamodb-with-node/)
 
-# DynamoDB PartiQL
-DynamoDB supports a subset of the official PartiQL specification.  For example, the `like` keyword
- is not supported in DynamoDB.  PartiQL does not support `join` operations with DynamoDB.
+# PartiQL & DynamoDB
+DynamoDB supports a subset of the official PartiQL specification.  For example, the `like` keyword and `join` operations are not supported in DynamoDB.
 
 [Statements](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
 [Functions](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-functions.html)
