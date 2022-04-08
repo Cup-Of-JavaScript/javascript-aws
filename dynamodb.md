@@ -101,7 +101,7 @@ A DynamoDB table has two keys:
 
 The Sort key can be thought of as a secondary key (composite key) to help provide uniqueness in your table.
 
-Table scans can consume HUGE amounts of read capacity and hinder the performance of our application.  Shadow tables are useful for business queries.
+Table scans can consume HUGE amounts of read capacity and hinder the performance of your application.  Shadow tables (copies) are useful for business queries that will not impact the user experience.
 
 Avoid table scans by creating indexes for the field in your where clause.  The pricing details of an index is the same for tables.
 
