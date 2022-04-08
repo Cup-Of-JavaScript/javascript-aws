@@ -126,7 +126,7 @@ Querying an Index:
 SELECT * FROM "Customer"."firstName-index" where firstName = 'Tom'
 ```
 
-Full table scan (the primary key is customer id):
+Full table scan (bad), because the primary key is `customer_id` not `firstName`:
 ```
 SELECT * FROM "Customer" where firstName = 'Tom'
 ```
