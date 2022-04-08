@@ -75,3 +75,34 @@ Example:
     "age": 54
 }
 ```
+
+# Ex. 9 Lambda
+Basic
+
+# Ex. 10 Lambda --> DDB
+Create 
+
+
+# Ex. 11 API GW --> Lambda --> DDB
+Create the following endpoint using the API Gateway:
+
+![](./docs/api-gw-route-ddb.png)
+
+This endpoint connects to a lambda function that returns the first name for a customer in the Customer table.
+
+URL:
+```
+GET https://js48lhu1t0.execute-api.us-east-1.amazonaws.com/dev/ddb/7
+```
+
+Output:
+```
+Paul
+```
+
+Lambda test event:
+```
+{
+ "pathParameters":{"id":"7"}
+}
+```
