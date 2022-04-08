@@ -72,6 +72,9 @@ Sort Key is useful for:
 - greater than
 - less than
 
+When creating an index, only include the Attribute Projections that you will need
+
+![](./docs/attibute-projections.png)
 
 # DynamoDB Proxy
 These files show the three ways to interact with DynamoDB:
