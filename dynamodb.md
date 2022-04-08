@@ -109,7 +109,7 @@ Functions
 
 #### Table Scan
 A DynamoDB table has two keys:
-- Primary Key
+- Paritition Key
 - Sort Key
 
 The Sort key can be thought of as a secondary key (composite key) to help provide uniqueness in your table.
