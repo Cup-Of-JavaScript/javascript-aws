@@ -81,6 +81,11 @@ Querying an Index:
 SELECT * FROM "Customer"."firstName-index" where firstName = 'Tom'
 ```
 
+Full table scan (the primary key is customer id):
+```
+SELECT * FROM "Customer" where firstName = 'Tom'
+```
+
 # Attributes
 - Item (a row)
 - Attribute (a column)
