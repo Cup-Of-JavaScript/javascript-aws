@@ -141,19 +141,6 @@ Can also query index name:
 aws dynamodb scan --table-name Customer --index-name firstName-index --return-consumed-capacity INDEXES
 ```
 
-
-# Attributes
-- Item (a row)
-- Attribute (a column)
-- Table (A collection of items)
-
-# Keys
-- Primary Keys => Partition key
-- Compositie Key => Partition key & sort key (Used to ensure uniqueness)
-
-# Secondary Index
-- Indexs that allow querying target attributes
-
 # Capacity Units
 - Write Capacity Unit (WCU): 1 write operation per second of 1KB
 - Read Capacity Unit (RCU): 1 or 2 read operations per second of 4KB
