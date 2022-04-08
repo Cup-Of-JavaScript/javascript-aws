@@ -9,6 +9,8 @@
 - [Document Client](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html)
 - [PartiQL](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
 
+-[Document Client SDK](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-dynamodb/globals.html#paginatequery)
+
 # DynamoDB Datatypes
 - [DataTypes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.DataTypes.html)
 - All Numbers: "N"
@@ -53,6 +55,13 @@ await ddbc.put(params).promise();
 
 ```
 
+# Design Considerations
+- DynamoDB works best as a flat document store with simple queries in the where clause (querying the primary or sort key)
+- Table scans can be avoided by creating indexes for the target fields on a table
+- If your scenario requires heavily nested data and complex queries, a relational DB is probably a better choice
+- It is not possible to join tables with DynamoDB/PartiQL
+
+
 # DynamoDB Proxy
 These files show the three ways to interact with DynamoDB:
 - [DDB-Proxy](./ddb/ddb-proxy.js)
@@ -77,6 +86,8 @@ A DynamoDB table has two keys:
 
 The Sort key can be thought of as a secondary key (composite key) to help provide uniqueness in your table.
 
+Table scans can consume HUGE amounts of read capacity and hinder the performance of our application.  Shadow tables are useful for business queries.
+
 Avoid table scans by creating indexes for the field in your where clause.  The pricing details of an index is the same for tables.
 
 ```
@@ -91,6 +102,30 @@ Full table scan (the primary key is customer id):
 ```
 SELECT * FROM "Customer" where firstName = 'Tom'
 ```
+
+Return capacity units for full table scan (also visible in the web console):
+```
+aws dynamodb scan --table-name Customer --return-consumed-capacity INDEXES
+
+"ConsumedCapacity": {
+    "TableName": "Customer",
+    "CapacityUnits": 0.5,
+    "Table": {
+        "CapacityUnits": 0.5
+    }
+}
+```
+
+Paging
+```
+aws dynamodb scan --table-name Customer --return-consumed-capacity INDEXES --page-size 100
+```
+
+Can also query index name:
+```
+aws dynamodb scan --table-name Customer --index-name firstName-index --return-consumed-capacity INDEXES
+```
+
 
 # Attributes
 - Item (a row)
