@@ -69,6 +69,7 @@ await ddbc.put(params).promise();
 - DAX is a caching layer that can reduce DDB latency to microseconds (vs milliseconds)
 - Indexes are not replicated to other regions
 - To avoid a hot partition, design your partition key to include target attributes.
+- [AWS DynamoDB Schema Design](https://youtu.be/XvD2FrS5yYM)
 
 
 ![](./docs/hot-part.png)
