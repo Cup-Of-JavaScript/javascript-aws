@@ -73,7 +73,7 @@ await ddbc.put(params).promise();
 # Design Considerations
 - DynamoDB works best as a flat document store with simple queries in the where clause (querying the primary or sort key)
 - Table scans can be avoided by creating indexes for the target fields on a table
-- If your scenario requires heavily nested data and complex queries, a relational DB is probably a better choice
+- If your scenario requires heavily nested data and complex queries, a relational DB is probably a better choice or you can do [this](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-modeling-nosql-B.html)
 - It is not possible to join tables with DynamoDB/PartiQL
 - DAX is a caching layer that can reduce DDB latency to microseconds (vs milliseconds)
 - Indexes are not replicated to other regions
