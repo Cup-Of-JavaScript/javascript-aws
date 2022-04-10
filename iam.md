@@ -5,6 +5,7 @@
 https://app.pluralsight.com/library/courses/identity-access-management-aws-policies-permissions/table-of-contents)
 - [AWS IAM Tutorial - How to Create a User and Policy 5m](https://youtu.be/dMPDZHVIZBs)
 - [AWS IAM Overview in 7 minutes | Beginner Overview 7m](https://youtu.be/y8cbKJAo3B4)
+- [AWS re:Invent 2019: [REPEAT 1] Getting started with AWS identity (SEC209-R1) 1h](https://youtu.be/Zvz-qYYhvMk)
 
 # Policy Types
 - AWS Managed
