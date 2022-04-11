@@ -369,3 +369,6 @@ xray
 ```
 
 *** My experience.
+
+# Pricing
+- [What is free and what is not?](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=tier%23always-free%7Ctier%2312monthsfree&awsf.Free%20Tier%20Categories=*all&all-free-tier.q=s3&all-free-tier.q_operator=AND)

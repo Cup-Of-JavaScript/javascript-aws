@@ -167,3 +167,10 @@ Can also query index name:
 aws dynamodb scan --table-name Customer --index-name firstName-index --return-consumed-capacity INDEXES
 ```
 
+# Pricing
+- Free Tier ALWAYS FREE
+- Amazon DynamoDB
+- 25 GB of storage
+- 25 provisioned Write Capacity Units (WCU)
+- 25 provisioned Read Capacity Units (RCU)
+- Enough to handle up to 200M requests per month.

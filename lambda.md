@@ -11,3 +11,8 @@ Two places in which a Lambda function can run:
 - Develop & test the business logic locally, then ship it to AWS Lambda
 - CloudWatch logs are your best friend!
 - Event templates are your also your best friend!
+
+# Pricing
+- Free Tier ALWAYS FREE
+- 1 Million free requests per month
+- Up to 3.2 million seconds (37 days) of compute time per month
