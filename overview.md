@@ -3,7 +3,7 @@
 - AWS responsibility “Security of the Cloud”
 - Customer responsibility “Security in the Cloud”
 - [Global](https://aws.amazon.com/about-aws/global-infrastructure/?p=ngi&loc=1)
-- [Regions & AZs](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
+- [Regions & Availability Zones (AZs)](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
 - 84 Azs
 - 300 Edge locations
 - The cloud is spongy!  Some things take awhile to propogate/activate.
@@ -15,40 +15,43 @@
 - AWS Web Console is a great place to learn AWS, HOWEVER it is NOT a good place for developing enterprise grade applications that require multiple environments
 
 # Videos
-[AWS Foundations: Getting Started with the AWS Cloud Essentials (66m)](https://app.pluralsight.com/course-player?clipId=d9197e74-8d70-45c2-a951-0ad7845e3daa)
-  - Deployments
-     - Full Cloud
-     - Hybrid
-     - Private Cloud
-  - Many Regions
-     - Availability Zones (AZs)
-  - Supports Docker Containers
-  - Load Balancing
-  - Auto Scaling
-  - S3: "Infinite" object store (buckets)
-  - EBS/EFS
-  - Database
-    - Unmanaged (EC2)
-    - Managed (RDS)
-        - Amazon Auroa (Flagship DB)
-            - Relational
-            - HA
-            - 5x faster than MySQL
-            - Inexpensive
-        - DynamoDB
-            - NoSQL
-        - Redshift: Data warehouse
-        - Amazon DocumentDB: Managed MongoDB
-        - Neptune: Graph DB
-  - Direct Connect
-  - VPC 
-  - IAM     
-  - AWS Shield
-    - Standard
-    - Advanced
-  - Pricing: Pay as you/pay for what you use
+- [AWS Foundations: Getting Started with the AWS Cloud Essentials (66m)](https://app.pluralsight.com/course-player?clipId=d9197e74-8d70-45c2-a951-0ad7845e3daa)
+- [Fundamental Cloud Concepts for AWS (1h 24m)](https://app.pluralsight.com/library/courses/fundamental-cloud-concepts-aws/table-of-contents)
 
-[Fundamental Cloud Concepts for AWS (1h 24m)](https://app.pluralsight.com/library/courses/fundamental-cloud-concepts-aws/table-of-contents)
+# Video Notes AWS Foundations: Getting Started with the AWS Cloud Essentials
+- Deployments
+  - Full Cloud
+  - Hybrid
+  - Private Cloud
+- Many Regions
+  - Availability Zones (AZs)
+- Supports Docker Containers
+- Load Balancing
+- Auto Scaling
+- S3: "Infinite" object store (buckets)
+- EBS/EFS
+- Database
+  - Unmanaged (EC2)
+  - Managed (RDS)
+      - Amazon Auroa (Flagship DB)
+          - Relational
+          - HA
+          - 5x faster than MySQL
+          - Inexpensive
+      - DynamoDB
+          - NoSQL
+      - Redshift: Data warehouse
+      - Amazon DocumentDB: Managed MongoDB
+      - Neptune: Graph DB
+- Direct Connect
+- VPC 
+- IAM     
+- AWS Shield
+  - Standard
+  - Advanced
+- Pricing: Pay as you/pay for what you use
+
+# Fundamental Cloud Concepts for AWS
 - Budget Alerts
 - Edge Locations
   - CloudFront/Lambda
