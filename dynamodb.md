@@ -1,10 +1,12 @@
 # DynamoDB
-Two parts to master DynamoDB:
+There are two main concepts when learning DynamoDB:
 - How to read/write data
 - Table/index design
 
-# Resources
+# Videos
 - [AWS DynamoDB Fundamentals ~2h (Skip 4 & 5)](https://app.pluralsight.com/library/courses/aws-dynamodb-fundamentals/table-of-contents) (UI is old)
+
+# Links
 - [Best Practice](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices.html)
 - [Anatomy of an Item](https://www.dynamodbguide.com/anatomy-of-an-item/)
 - [JSON to DynamoDB JSON Tool](https://dynobase.dev/dynamodb-json-converter-tool/#:~:text=DynamoDB%20Converter%20Tool,a%20DynamoDB%2Dcompatible%20JSON%20format.)
@@ -13,7 +15,7 @@ Two parts to master DynamoDB:
 - [Native](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html)
 - [Document Client](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-document-client.html) ([DynamoDB Client - AWS SDK for JavaScript v3](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-dynamodb/))
 - [PartiQL](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-reference.statements.html)
-
+  - PartiQL queries perform exactly the same as native & document client queries
 
 These files in this repo show the three ways to interact with DynamoDB:
 - [Client](./ddb/test.js)
@@ -24,7 +26,6 @@ These files in this repo show the three ways to interact with DynamoDB:
 - Read Capacity Unit (RCU): 1 or 2 read operations per second of 4KB
   - Eventual consistency $ (reading data before it has been throughly stored - dirty reads)
   - Strong consistency $$$ (reading the most up-to-date data after being replicated)
-
 
 # DynamoDB Datatypes
 - [DataTypes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBMapper.DataTypes.html)
@@ -118,7 +119,6 @@ Functions
 - Attribute_type
 - Contains
 - Size
-
 
 #### Table Scan
 A DynamoDB table has two keys:

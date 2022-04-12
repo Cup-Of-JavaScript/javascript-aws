@@ -1,5 +1,7 @@
 # Lambda
-- [AWS Developer: An Introduction to AWS Lambda 3h](https://app.pluralsight.com/library/courses/aws-developer-introduction-aws-lambda/table-of-contents)
+
+# Videos
+- [AWS Developer: An Introduction to AWS Lambda (3h)](https://app.pluralsight.com/library/courses/aws-developer-introduction-aws-lambda/table-of-contents)
 - Section 5&6 are a bit advanced
 
 # Overview

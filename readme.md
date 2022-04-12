@@ -1,4 +1,5 @@
 # JavaScript AWS
+Assignment repo to help students learn AWS with JavaScript.  Assignments are located [here](./assignments.md)
 
 # Getting Started
 - Clone this repo
@@ -13,4 +14,3 @@
 - [API GW](api-gw.md)
 - [RDS](rds.md)
 - [DynamoDB](dynamodb.md)
-

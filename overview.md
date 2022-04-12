@@ -15,7 +15,7 @@
 - AWS Web Console is a great place to learn AWS, HOWEVER it is NOT a good place for developing enterprise grade applications that require multiple environments
 
 # Videos
-[AWS Foundations: Getting Started with the AWS Cloud Essentials 66min](https://app.pluralsight.com/course-player?clipId=d9197e74-8d70-45c2-a951-0ad7845e3daa)
+[AWS Foundations: Getting Started with the AWS Cloud Essentials (66m)](https://app.pluralsight.com/course-player?clipId=d9197e74-8d70-45c2-a951-0ad7845e3daa)
   - Deployments
      - Full Cloud
      - Hybrid
@@ -48,7 +48,7 @@
     - Advanced
   - Pricing: Pay as you/pay for what you use
 
-[Fundamental Cloud Concepts for AWS 1h 24m](https://app.pluralsight.com/library/courses/fundamental-cloud-concepts-aws/table-of-contents)
+[Fundamental Cloud Concepts for AWS (1h 24m)](https://app.pluralsight.com/library/courses/fundamental-cloud-concepts-aws/table-of-contents)
 - Budget Alerts
 - Edge Locations
   - CloudFront/Lambda
