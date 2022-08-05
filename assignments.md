@@ -4,10 +4,10 @@
 Upload a file using the following naming schema: `upload-file-stu{studentid}.txt` to the following bucket: `siu-avb-bucket`.  Once the file has been uploaded to AWS, use the AWS CLI to return a list of files in this bucket.  Then download the file from AWS using the following naming schema: `download-file.txt`.
 
 # Ex. 2 File Upload/Download via SDK
-### Part A Boto3
+### Part A: Boto3
 Create a new Python project that uploads and downloads a txt file using Boto3.  Use the [Python Reference](https://gitlab.com/mburolla/python-reference/-/blob/main/s3-ref.py) as a guide.  Upload this project to a new public repo in YOUR GitHub account.  Create a simple Readme.md doc that briefly describes the repo.
 
-### Part B JavaScript aws-sdk
+### Part B: JavaScript aws-sdk
 Create a new Node project that uploads and downloads a txt file using the JavaScript aws-sdk (`const AWS = require('aws-sdk')`). Upload this project to a new public repo in YOUR GitHub account.  Create a simple Readme.md doc that briefly describes the repo.
 
 # Ex. 3 IAM Policy Lambda
