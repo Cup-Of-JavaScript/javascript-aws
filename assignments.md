@@ -1,15 +1,12 @@
 # JavaScript AWS Assignments
 
-# Ex. 1
-Create an S3 bucket with the following schema: `sia-{YOUR_STUDENT_ID}-bucket`.  This will be your student bucket.
+# Ex. 1 File Upload/Download via AWS CLI
+Upload a file using the following naming schema: `upload-file-stu{studentid}.txt` to the following bucket: `siu-avb-bucket`.  Once the file has been uploaded to AWS, use the AWS CLI to return a list of files in this bucket.  Then download the file from AWS using the following naming schema: `download-file.txt`.
 
-# Ex. 2 CLI S3
-Use the AWS CLI to upload a file to your student bucket.
+# Ex. 2 File Upload via Boto3 
+Create a new Python project that uploads a file using Boto3.  Use the [Python Reference](https://gitlab.com/mburolla/python-reference/-/blob/main/s3-ref.py) as a guide.  Upload this project to a new public repo in YOUR GitHub account.  Create a nice Readme.md doc that briefly describes the repo.
 
-# Ex. 3 AWS-SDK S3 
-Use aws-sdk to upload a file to your student bucket.
-
-# Ex. 4 IAM Policy Lambda
+# Ex. 3 IAM Policy Lambda
 Create a Lambda function that contains the following code:
 
 ```
@@ -20,23 +17,23 @@ const S3 = new AWS.S3({region: 'us-east-1'});
 exports.handler = async (event) => {
     const b = { firstName: "Joe", lastName: "Smith" };
     const buffer = Buffer.from(JSON.stringify(b), "utf-8");
-    await S3.upload({ Bucket: 'sia-test-2', Key: 'joe.txt', Body: buffer }).promise();
+    await S3.upload({ Bucket: 'siu-avb-bucket', Key: 'joe.txt', Body: buffer }).promise();
     return "ok";
 };
 
 ```
 
-Name your function using the following schema: sia-{your initials}-upload-s3
+Name your function using the following schema: `sia-{your initials}-upload-s3`
 
-Create a managed policy and attach it to the execution role for your lambda function.  This new policy provides write access to your student bucket.
+Create a managed policy and attach it to the execution role for your lambda function.  This new policy must provide write access to this bucket.
 
-# Ex. 5  IAM Bucket Policy
+# Ex. 4  IAM Bucket Policy
 Create a bucket policy that only allows you to upload a file from your home computer and attach it to your student bucket.
 
-# Ex. 6 API GW
+# Ex. 5 API GW
 Create a POST route with the following schema: `/{STUDENT_ID}/upload`.  Create a Lambda integration that calls a Lambda file to upload a file to S3.  Attach the Lambda integration to this Route, deploy the API, and call this route using Postman.
 
-# Ex. 7 DynamoDB Write
+# Ex. 6 DynamoDB Write
 Create an Express web API with the following endpoint:
 
 ```
@@ -55,7 +52,7 @@ The endpoint accepts the following data and stores it into a Customer table in D
 
 ```
 
-# Ex. 8 DynamoDB Read
+# Ex. 7 DynamoDB Read
 
 Update the Express web API in Ex. 7 with the following new endpoint:
 
@@ -76,13 +73,13 @@ Example:
 }
 ```
 
-# Ex. 9 Lambda
-Create a lambda function that returns the contents of the event object.  Copy and paste the JSON response in `jsonviewer.stack.hu` and view as a tree.
+# Ex. 10 Lambda
+Create a lambda function that returns the contents of the event object.  Copy and paste the JSON response in `http://jsonviewer.stack.hu` and view as a tree.
 
-# Ex. 10 Lambda --> DDB
+# Ex. 11 Lambda --> DDB
 Create a Lambda function that returns the first name of a customer from the DynamoDB Customer table.
 
-# Ex. 11 API GW --> Lambda --> DDB
+# Ex. 12 API GW --> Lambda --> DDB
 Create the following endpoint using the API Gateway:
 
 ```

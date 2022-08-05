@@ -1,5 +1,5 @@
 # JavaScript AWS
-Assignment repo to help students learn AWS with JavaScript.  Assignments are located [here](./assignments.md)
+Assignments are located [here](./assignments.md)
 
 # Getting Started
 - Clone this repo
@@ -7,7 +7,6 @@ Assignment repo to help students learn AWS with JavaScript.  Assignments are loc
 
 # Contents
 - [Overview](overview.md)
-- [CLI](cli.md)
 - [IAM Security](iam.md)
 - [S3](s3.md)
 - [Lambda](lambda.md)

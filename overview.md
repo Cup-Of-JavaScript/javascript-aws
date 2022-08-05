@@ -6,7 +6,7 @@
 - [Regions & Availability Zones (AZs)](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
 - 84 Azs
 - 300 Edge locations
-- The cloud is spongy!  Some things take awhile to propogate/activate.
+- The cloud is "spongy" and some things take awhile to propogate/activate.
 - Avoid using the root account as your "goto" account
 - ProTip: Create at least three billing alarms:
   - $1.00/day
