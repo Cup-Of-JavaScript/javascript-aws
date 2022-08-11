@@ -5,20 +5,20 @@
 // Desc: Test client for DynamoDB Proxy.
 //
 
-const ddbProxy = require('./ddb-proxy.js');
+const ddbProxy = require('./api.js');
 
 const documentClient = async () => {
    
     // INSERT ONE
     // Works fine for a flat structure.
-    const customer = {
-        customerId: 1,
-        firstName: "Adraina", 
-        lastName: "Cheeks",
-        age: 27, 
-        zip: 29501
-    }
-    const r = await ddbProxy.dcInsertItem(customer);
+    // const customer = {
+    //     "zip": 23111,
+    //     "firstName": "Paul",
+    //     "lastName": "Simmons",
+    //     "customerId": 7,
+    //     "age": 54
+    // }
+    // const r = await ddbProxy.dcInsertItem(customer);
 
     // INSERT JS BLOB
     // Works for any type of nested structure.
@@ -37,9 +37,9 @@ const documentClient = async () => {
     // }
     // const r = await ddbProxy.dcInsertInfoForCustomerId(6, data);
 
-    // SELECT ONE
-    // const customerId = 1;
-    // const r = await ddbProxy.dcGetItem(customerId);
+    //SELECT ONE
+    const customerId = 1;
+    const r = await ddbProxy.dcGetItem(customerId);
 
     // SELECT INFO
     //const r = await ddbProxy.dcGetInfoForCustomer(5);
