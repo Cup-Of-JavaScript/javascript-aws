@@ -12,11 +12,11 @@ const documentClient = async () => {
     // INSERT ONE
     // Works fine for a flat structure.
     const customer = {
-        customerId: 2,
-        firstName: "Tom", 
-        lastName: "Thumb",
-        age: 17, 
-        zip: 14580
+        customerId: 1,
+        firstName: "Adraina", 
+        lastName: "Cheeks",
+        age: 27, 
+        zip: 29501
     }
     const r = await ddbProxy.dcInsertItem(customer);
 
